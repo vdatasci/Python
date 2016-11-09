@@ -1,9 +1,9 @@
+import fuzzywuzzy
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
 import requests
 from BeautifulSoup import BeautifulSoup
 import re
-from fuzzywuzzy import fuzz
-from fuzzywuzzy import process
-
 
 
 url = 'https://en.wikipedia.org/w/api.php?action=query&list=random&rnnamespace=0&rnlimit=10&format=xml'
