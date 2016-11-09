@@ -20,14 +20,19 @@ titles = []
 for name in soup.findAll(title=re.compile(".*")):
      titles.append(name['title'])
 
-choices = ["Yes", "No"]
 
 
 for i in range(len(titles)):
-     if process.extract(input("Do you want to read about " + titles[i] + "?"), choices, limit=1) == choice[0]:
+     if fuzz.partial_ratio(input("Do you want to read about " + titles[i] + "?"), "Yes") > 75:
           url = 'https://en.wikipedia.org/wiki?curid=' + ids[i]
-     else:
-          break
+
+#for i in range(len(titles)):
+     #if process.extract(input("Do you want to read about " + titles[i] + "?"), choices, limit=1) == choice[0]:
+          #url = 'https://en.wikipedia.org/wiki?curid=' + ids[i]
+     #else:
+          #break
+     
+     
      #if process.extract(raw_input, choices, limit=1) = 'Yes'
           #url = 'https://en.wikipedia.org/wiki?curid=' + ids[i]
           #continue
