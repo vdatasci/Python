@@ -2,7 +2,7 @@ from pandas import *
 import numpy
 
 data = {
-        'name': ['UConn','NorthWestern','Harvard','Yale','MIT'],
+        'name': ['UConn','NorthWestern','BSU','Yale','MIT'],
         'year': [2016,2012,2013,2014,2016],
         'reports': [1,24,31,2,3]
         }
