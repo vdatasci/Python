@@ -28,5 +28,5 @@ for item in soup.findAll(id=re.compile("[0-9]")):
      id.append(item['id'])
      
 titles = []
-for name in soup.findAll(title=re.compile("[0-9]")):
+for name in soup.findAll(title=re.compile(".*")):
      titles.append(name['title'])
