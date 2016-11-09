@@ -11,7 +11,7 @@ soup = BeautifulSoup(html)
 
 ids = []
 for item in soup.findAll(id=re.compile("[0-9]")):
-     id.append(item['id'])
+     ids.append(item['id'])
      
 titles = []
 for name in soup.findAll(title=re.compile(".*")):
