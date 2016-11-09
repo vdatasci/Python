@@ -18,3 +18,5 @@ for name in soup.findAll(title=re.compile(".*")):
      titles.append(name['title'])
 
 
+mat = [ids, titles]
+zip(*mat)
