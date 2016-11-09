@@ -12,7 +12,7 @@ soup = BeautifulSoup(html)
 ids = []
 for item in soup.findAll(id=re.compile("[0-9]")):
      ids.append(item['id'])
-     
+
 titles = []
 for name in soup.findAll(title=re.compile(".*")):
      titles.append(name['title'])
