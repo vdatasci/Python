@@ -1,12 +1,12 @@
 #You could use an import and single line code like this:
 
 import ctypes  # An included library with Python install.
-ctypes.windll.user32.MessageBoxW(0, "Your text", "Your title", 1)
+ctypes.windll.user32.MessageBoxA(0, "Your text", "Your title", 1) #MessageBoxW for Chinese
 
 #Or define a function (Mbox) like so:
 import ctypes  # An included library with Python install.
 def Mbox(title, text, style):
-    ctypes.windll.user32.MessageBoxW(0, text, title, style)
+    ctypes.windll.user32.MessageBoxA(0, text, title, style) #MessageBoxW for Chinese
 Mbox('Your title', 'Your text', 1)
 
 
