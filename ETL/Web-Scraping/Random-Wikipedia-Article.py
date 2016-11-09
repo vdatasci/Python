@@ -24,10 +24,11 @@ choices = ["Yes", "No"]
 
 
 for i in range(len(titles)):
-     print("Do you want to read about " + titles[i])
-     if process.extract(raw_input, choices, limit=1) = 'Yes'
+     if process.extract(input("Do you want to read about " + titles[i] + "?"), choices, limit=1) = "Yes":
           url = 'https://en.wikipedia.org/wiki?curid=' + ids[i]
-          continue
+     #if process.extract(raw_input, choices, limit=1) = 'Yes'
+          #url = 'https://en.wikipedia.org/wiki?curid=' + ids[i]
+          #continue
      
  
 
