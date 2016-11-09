@@ -28,20 +28,3 @@ for i in range(len(titles)):
      if fuzz.partial_ratio(ans, "Yes") > 75:
           url = 'https://en.wikipedia.org/wiki?curid=' + ids[i]
           webbrowser.open(url,new=1)
-
-#for i in range(len(titles)):
-     #if process.extract(input("Do you want to read about " + titles[i] + "?"), choices, limit=1) == choice[0]:
-          #url = 'https://en.wikipedia.org/wiki?curid=' + ids[i]
-     #else:
-          #break
-     
-     
-     #if process.extract(raw_input, choices, limit=1) = 'Yes'
-          #url = 'https://en.wikipedia.org/wiki?curid=' + ids[i]
-          #continue
-     
- 
-
-
-#mat = [ids, titles]
-#zip(*mat)
