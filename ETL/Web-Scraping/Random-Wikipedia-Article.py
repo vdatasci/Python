@@ -24,7 +24,7 @@ choices = ["Yes", "No"]
 
 
 for i in range(len(titles)):
-     if process.extract(input("Do you want to read about " + titles[i] + "?"), choices, limit=1) == "Yes":
+     if process.extract(input("Do you want to read about " + titles[i] + "?"), choices, limit=1) == choice[0]:
           url = 'https://en.wikipedia.org/wiki?curid=' + ids[i]
      else:
           break
