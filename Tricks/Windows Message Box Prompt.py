@@ -1,6 +1,6 @@
 #You could use an import and single line code like this:
 
-#import ctypes  # An included library with Python install.
+import ctypes  # An included library with Python install.
 ctypes.windll.user32.MessageBoxW(0, "Your text", "Your title", 1)
 
 #Or define a function (Mbox) like so:
