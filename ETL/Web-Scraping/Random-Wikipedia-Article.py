@@ -1,6 +1,9 @@
 import requests
 from BeautifulSoup import BeautifulSoup
 import re
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
+
 
 
 url = 'https://en.wikipedia.org/w/api.php?action=query&list=random&rnnamespace=0&rnlimit=10&format=xml'
@@ -17,6 +20,17 @@ titles = []
 for name in soup.findAll(title=re.compile(".*")):
      titles.append(name['title'])
 
+choices = ["Yes", "No"]
 
-mat = [ids, titles]
-zip(*mat)
+
+for i in range(len(titles)):
+     print("Do you want to read about " + titles[i])
+     if process.extract(raw_input, choices, limit=1) = 'Yes'
+          url = 'https://en.wikipedia.org/wiki?curid=' + ids[i]
+          continue
+     
+ 
+
+
+#mat = [ids, titles]
+#zip(*mat)
