@@ -23,7 +23,8 @@ for name in soup.findAll(title=re.compile(".*")):
 
 
 for i in range(len(titles)):
-     if fuzz.partial_ratio(input("Do you want to read about " + titles[i] + "?"), "Yes") > 75:
+     ans = input("Do you want to read about " + titles[i] + "?")
+     if fuzz.partial_ratio(ans, "Yes") > 75:
           url = 'https://en.wikipedia.org/wiki?curid=' + ids[i]
 
 #for i in range(len(titles)):
