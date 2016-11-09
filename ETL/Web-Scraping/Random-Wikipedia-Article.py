@@ -1,3 +1,5 @@
+#This script runs in the Python 2.7 Command Line Environment
+
 import fuzzywuzzy
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
