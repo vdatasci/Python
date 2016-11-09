@@ -27,6 +27,6 @@ for name in soup.findAll(title=re.compile(".*")):
 
 for i in range(len(titles)):
      ans = raw_input("Do you want to read about " + titles[i] + "?")
-     if fuzz.partial_ratio(ans, "Yes") > 75:
+     if fuzz.partial_ratio(ans, "Yes") > 50:
           url = 'https://en.wikipedia.org/wiki?curid=' + ids[i]
           webbrowser.open(url,new=1)
