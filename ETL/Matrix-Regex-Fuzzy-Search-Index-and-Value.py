@@ -9,19 +9,19 @@ A
 
 srch = raw_input('Whatchu searchin? ')
 
-process.extract(srch, A, limit=1)
+#process.extract(srch, A, limit=1)
 
-process.extract(srch, A[0,0], limit=1)
+#process.extract(srch, A[0,0], limit=1)
 
-A.shape
+#A.shape
 
 #matrix dimension(i,j)
 i = int(re.search('[0-9]+', str(A.shape)).group(0))
 j = int(re.search(' [0-9]+', str(A.shape)).group(0))
 
-for row in range(i):
-    for col in range(j):
-            print(A[row,col])
+#for row in range(i):
+#    for col in range(j):
+#            print(A[row,col])
 
 
 for row in range(i):
