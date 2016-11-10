@@ -19,3 +19,6 @@ A.shape
 i = int(re.search('[0-9]+', str(A.shape)).group(0))
 j = int(re.search(' [0-9]+', str(A.shape)).group(0))
 
+for row in range(i):
+    for col in range(j):
+            print(A[row,col])
