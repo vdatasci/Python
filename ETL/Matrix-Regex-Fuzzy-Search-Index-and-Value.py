@@ -15,11 +15,10 @@ for row in range(i):
     for col in range(j):
             lst.append(A[row,col])
 
-lst2 = []
 for o in range(i+j):
     lst2.append(fuzz.partial_ratio(srch,lst[o]))
 
 maxlst2index = lst2.index(max(lst2))
 
-lst[maxlst2index]
-np.where(A==lst[maxlst2index])
+srch_rslt = lst[maxlst2index]
+np.where(A==srch_rslt)
