@@ -1,5 +1,9 @@
 import re
 
+m = re.search('(?<=abc)def', 'abcdef')
+m.group(0)
+#'def'
+
 
 rx = re.compile('p\@tt3rn')
 result = rx.match(r'Match the word p@tt3rn in this string')
