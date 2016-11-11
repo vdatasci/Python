@@ -14,3 +14,9 @@ code
 #f = urllib.urlopen(url)
 #if f.code==200:
 #    fxst = 'exists'
+
+
+#Grab all text from webpage
+   #http://savkar.math.uconn.edu/files/dfdf
+   #http://web.stanford.edu/class/sdfsf
+      #fuzzy regex to see if page exists: (Not Found)|(404 Error)
