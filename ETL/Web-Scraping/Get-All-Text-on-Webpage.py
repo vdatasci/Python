@@ -16,11 +16,17 @@ def visible(element):
          return False
      return True
 
-vistexts = filter(visible, texts)
+visibletxt = filter(visible, texts)
 
 print(vistexts)
 
 
 
 #For this example, we can run a regex on all the text of the website to get the ip address.
-#re.search('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+',str(vistexts)).group(0)
+#re.search('[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+',str(visibletxt)).group(0)
+
+
+#re.findall('[0-9]+',str(visibletxt))
+#can also use finditer
+
+
