@@ -1,5 +1,8 @@
 #This code is from the skfuzzy Document. I will be creating a Quantitative Economics example soon.
 
+#In marketing, customers can be grouped into fuzzy clusters based on their 
+#needs, brand choices, psycho-graphic profiles, or other marketing related partitions.
+
 from __future__ import division, print_function
 import numpy as np
 import matplotlib.pyplot as plt
