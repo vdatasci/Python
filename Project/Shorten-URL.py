@@ -1,5 +1,6 @@
 import requests
 
+tokenBitly = '9b66f572ea565ad186c0a78836113264fa8d051a'
 
 #URL shortening is crucial given twitter 140 characters restriction
 def shorten_url(longUrl):
