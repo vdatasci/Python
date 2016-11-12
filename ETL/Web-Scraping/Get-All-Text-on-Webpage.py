@@ -18,7 +18,7 @@ def visible(element):
 
 visibletxt = filter(visible, texts)
 
-print(vistexts)
+print(visibletxt)
 
 
 
