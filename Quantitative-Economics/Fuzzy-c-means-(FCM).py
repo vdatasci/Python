@@ -1,5 +1,7 @@
 #This code is from the skfuzzy Document. I will be creating a Quantitative Economics example soon.
 
+#Fuzzy c-means (FCM) is a data clustering technique in which a dataset is grouped into n clusters with every datapoint in the dataset belonging to every cluster to a certain degree.
+
 #In marketing, customers can be grouped into fuzzy clusters based on their 
 #needs, brand choices, psycho-graphic profiles, or other marketing related partitions.
 
