@@ -6,9 +6,10 @@ from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 
 
-def sql(statement, database):
+def sql(statement, database, dataPath):
     import sqlite3
-    db = sqlite3.connect(database+'.db')
+    dataPath = 'P:\Python\Database'
+    db = sqlite3.connect(dataPath+'/'database+'.db')
     sql = db.cursor().execute(statement)
     db.commit()
     db.close()
