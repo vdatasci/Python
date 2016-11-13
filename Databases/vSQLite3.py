@@ -6,11 +6,11 @@ from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 
 
-def dataBase(db):
-    conn = sqlite3.connect(db+'.db')
+def db(database):
+    db = sqlite3.connect(database+'.db')
 
 def sql(statement):
-    conn.cursor().execute(statment)
+    sql = db.cursor().execute(statment)
 
 c.execute('''
           CREATE TABLE person
