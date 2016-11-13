@@ -9,7 +9,7 @@ from fuzzywuzzy import process
 def sql(statement, database, dataPath):
     import sqlite3
     dataPath = 'P:\Python\Database'
-    db = sqlite3.connect(dataPath+'/'database+'.db')
+    db = sqlite3.connect(dataPath+'/'+database+'.db')
     sql = db.cursor().execute(statement)
     db.commit()
     db.close()
