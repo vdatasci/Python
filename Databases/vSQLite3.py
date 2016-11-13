@@ -14,7 +14,7 @@ def sql(statement, database, dataPath):
     db.commit()
     db.close()
 
-def show(statementPrint, database, dataPath)
+def show(statementPrint, database, dataPath):
     import sqlite3
     dataPath = 'P:\Python\Database'
     db = sqlite3.connect(dataPath+'/'+database+'.db')
