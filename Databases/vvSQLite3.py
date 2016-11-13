@@ -8,7 +8,7 @@ from fuzzywuzzy import process
 
 def sql(statement, database):
     db = sqlite3.connect(database+'.db')
-    sql = db.cursor().execute(statment)
+    sql = db.cursor().execute(statement)
     db.commit()
     db.close()
 
