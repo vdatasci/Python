@@ -18,8 +18,7 @@ def show(statementPrint, database, dataPath):
     import sqlite3
     dataPath = 'P:\Python\Database'
     db = sqlite3.connect(dataPath+'/'+database+'.db')
-    sql = db.cursor().execute(statement)
-    sql.execute('SELECT * FROM person')
+    sql = db.cursor().execute(statementPrint)
     print sql.fetchall()
     sql.execute(statementPrint)
     print sql.fetchall()
