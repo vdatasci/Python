@@ -1,14 +1,14 @@
 import requests
 from BeautifulSoup import BeautifulSoup
 
-url = 'https://www.reddit.com/r/learnpython/comments/5cs324/a_general_question_about_python/'
+url = 'http://dailycampus.com/'
 
 response = requests.get(url)
 html = response.content
 soup = BeautifulSoup(html)
 
 c = []
-b = soup.find("div", {"class" : ["sitetable nestedlisting"]})
+b = soup.find("div", {"class" : ["main-content"]})
 for v in b:
 	c.append(v.text)
 
