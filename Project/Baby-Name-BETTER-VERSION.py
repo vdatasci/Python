@@ -20,6 +20,6 @@ with open('P:\\Python\\babynames2014.txt') as f:
 alldata = ','.join(txtdata)
 names_array = map(lambda x:str(x), alldata.split(','))
 
-    d = gender.Detector()
+d = gender.Detector()
 for name in names_array:
     d.get_gender(name)
