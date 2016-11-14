@@ -1,3 +1,4 @@
+import re
 import sexmachine.detector as gender
 
 txtdata = []
