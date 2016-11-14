@@ -14,4 +14,5 @@ names_array = map(lambda x:str(x), alldata.split(','))
 d = gender.Detector()
 for name in names_array:
     if re.compile(r'\D').search(name) is not None:
-        d.get_gender(name)
+        name + ': ' + str(d.get_gender(name))
+
