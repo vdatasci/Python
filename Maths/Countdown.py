@@ -1,4 +1,4 @@
-def countdown(x)
+def countdown(x):
     if x<=0:
         print 'Finished!'
     else:
