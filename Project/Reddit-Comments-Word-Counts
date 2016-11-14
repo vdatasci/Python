@@ -1,0 +1,21 @@
+import requests
+from BeautifulSoup import BeautifulSoup
+
+url = 'https://www.reddit.com/r/learnpython/comments/5cs324/a_general_question_about_python/'
+
+response = requests.get(url)
+html = response.content
+soup = BeautifulSoup(html)
+
+c = []
+b = soup.find("div", {"class" : ["sitetable nestedlisting"]})
+for v in b:
+	c.append(v.text)
+
+
+
+file=open('filename.txt','rt')
+while true:
+	line=file.readline()
+	#do something
+file.close()
