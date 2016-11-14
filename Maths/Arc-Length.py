@@ -8,42 +8,21 @@ class Arc(object):
         self.height = float(height)
 
     def _asin(self, leg, hypotenuse, degrees = True):
-        '''
-        Calculate the arcsin given the length of the opposite leg and the
-        hypotenuse. Returns the angle in degrees if degrees is True,
-        otherwise returns radians.
-        '''
         radians = math.asin(leg/hypotenuse)
         if not degrees:
             return radians
-
         return math.degrees(radians)
 
     def _radius(self):
-        '''
-        Calculates the circle radius given the chord length and the height
-        of the arc. Uses Product of Segments and Pythagorean technique.
-        '''
         return self.chord ** 2 / (8 * self.height) + self.height / 2
 
- def _circumference(self):
-        '''
-        Calculates the circle circumference given the chord length and the
-        height of the arc.
-        '''
+    def _circumference(self):
         return 2 * math.pi * self.radius
 
- def _angle(self):
-        '''
-        Calculates the angle formed by lines from the arc ends to the
-        center of the circle.
-        '''
+    def _angle(self):
         return 2 * self._asin(self.chord / 2, self.radius)
 
- def getLength(self):
-        '''
-        Calculates the length of the arc given its chord length and height.
-        '''
+    def getLength(self):
         self.radius = self._radius()
         return self._angle() * self._circumference() / 360 
 
