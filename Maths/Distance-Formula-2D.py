@@ -1,4 +1,4 @@
-def distance(x1,y1.x2.y2):
+def distance(x1, y1, x2, y2):
     import math
     dx = x2 - x1
     dy = y2 - y1
