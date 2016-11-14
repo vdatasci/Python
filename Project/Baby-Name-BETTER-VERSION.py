@@ -3,10 +3,6 @@
 #From my understanding, these names are categorized by the most popular gender associated with each name.
 #We cool?
 
-import re
-import urllib
-import requests
-from BeautifulSoup import BeautifulSoup
 import sexmachine.detector as gender
 
 txtdata = []
@@ -22,4 +18,5 @@ names_array = map(lambda x:str(x), alldata.split(','))
 
 d = gender.Detector()
 for name in names_array:
-    d.get_gender(name)
+    if re.compile(r'\D').search(name) is not None:
+        d.get_gender(name)
