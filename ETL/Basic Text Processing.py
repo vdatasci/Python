@@ -38,8 +38,8 @@ print " ".join(a)
 ### Convert to single List Array ###
 import itertools 
 
-a = [[1, 2], [3, 4], [5, 6]]
-list(itertools.chain.from_iterable(a))
+v = [[1, 2], [3, 4], [5, 6]]
+list(itertools.chain.from_iterable(v))
 
 ###
 
