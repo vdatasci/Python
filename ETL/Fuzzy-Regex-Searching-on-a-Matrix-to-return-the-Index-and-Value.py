@@ -8,6 +8,8 @@ lst2=[]
 
 A = np.matrix([['hip hop','mixcloud'],['music','jammin']])
 srch = raw_input('Whatchu searchin? ')
+
+
 i = int(re.search('[0-9]+', str(A.shape)).group(0))
 j = int(re.search(' [0-9]+', str(A.shape)).group(0))
 for row in range(i):
