@@ -4,7 +4,7 @@ import requests
 from BeautifulSoup import BeautifulSoup
 
 
-url = 'https://www.wunderground.com/weather-forecast/06268'
+url = 'https://weather.com/weather/hourbyhour/l/Mansfield+Center+CT+06250'
 
 response = requests.get(url)
 html = response.content
@@ -12,9 +12,7 @@ html = response.content
 soup = BeautifulSoup(html)
 
 
-w = soup.find("div", {"id" : ["current"]})
+w = soup.find("td", {"class" : ["temp"]})
 w.text
 
-f = soup.find("span", {"class" : ["wx-value"]})
-f.text
 
