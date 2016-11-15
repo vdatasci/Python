@@ -30,6 +30,8 @@ a = ["Code", "mentor", "Python", "Developer"]
 a.insert(0,"You're")
 del a[1]
 a.remove('Developer')
+b, c = i.index('mentor'), i.index('Python')
+i[c], i[b] = i[b], i[c]
 print " ".join(a)
 
 ###
