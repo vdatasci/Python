@@ -7,6 +7,7 @@ import requests
 from BeautifulSoup import BeautifulSoup
 import re
 import webbrowser
+import os
 
 
 url = 'https://en.wikipedia.org/w/api.php?action=query&list=random&rnnamespace=0&rnlimit=10&format=xml'
@@ -30,3 +31,5 @@ for i in range(len(titles)):
      if fuzz.partial_ratio(ans, "Yes") > 50:
           url = 'https://en.wikipedia.org/wiki?curid=' + ids[i]
           webbrowser.open(url,new=1)
+
+os.system('P:\Python\Projects\wiki-random2.py')
