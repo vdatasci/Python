@@ -1,5 +1,4 @@
 class Customer(object):
-    import os
     def __init__(self, name, balance=0.0):
         self.name = name
         self.balance = balance
@@ -15,13 +14,12 @@ class Customer(object):
         return self.balance
 
 
-jv = Customer('Josh Voss', 50)
+#jv = Customer('Josh Voss', 50)
 
-jv.name
-jv.balance
-jv.withdrawl(10.0)
-jv
-jv.balance
+#jv.name
+#jv.balance
+#jv.withdrawl(10.0)
+#jv
+#jv.balance
 
-raw_input()
-os.system('Customers-Class.py')
+
