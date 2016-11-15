@@ -12,6 +12,6 @@ html = response.content
 soup = BeautifulSoup(html)
 
 pricetagslist = []
-pricetags = soup.findAll("div", {"class" : ["vk_c card-section"]})
+pricetags = soup.findAll("div", {"class" : ["g tpo knavi obcontainer mod"]})
 for prices in pricetags:
 	pricetagslist.append(prices.text)
