@@ -27,6 +27,7 @@ result
 ###
 ### Concat ###
 a = ["Code", "mentor", "Python", "Developer"] 
+a.insert(0,"You're")
 print " ".join(a)
 
 ###
