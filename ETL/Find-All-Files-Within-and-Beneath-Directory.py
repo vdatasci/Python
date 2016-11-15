@@ -1,5 +1,6 @@
 import os
 import fnmatch
+import datetime
 from tabulate import tabulate
 
 path='P:\\'
@@ -15,7 +16,7 @@ v=[]
 for file in configfiles:
     timestamp = os.stat(file).st_ctime
     date =datetime.datetime.fromtimestamp(timestamp/1e3)
-    v.append((os.stat(file).st_size, os.path.basename(file), date)
+    v.append((os.stat(file).st_size, os.path.basename(file), date))
 
 
 print tabulate(v, headers=['Size', 'FileName', 'Date Created'])
