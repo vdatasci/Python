@@ -9,9 +9,11 @@ configfiles = [os.path.join(dirpath, f)
     for f in fnmatch.filter(files, '*.txt')]
 
 
-print tabulate([['Alice', 24], ['Bob', 19]], headers=['Size', 'FileName', 'Date Created'])
 
-v = []
+
+v=[]
 for file in configfiles:
-    v = os.stat(file).st_size, '\t', file, '\t', os.stat(file).st_ctime
-    #print os.stat(file).st_size, '\t', file, '\t', os.stat(file).st_ctime
+    v.append((os.stat(file).st_size, os.path.basename(file), os.stat(file).st_ctime))
+
+
+print tabulate(v, headers=['Size', 'FileName', 'Date Created'])
