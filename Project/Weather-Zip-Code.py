@@ -4,7 +4,7 @@ import requests
 from BeautifulSoup import BeautifulSoup
 
 
-url = 'https://www.wunderground.com/weather-forecast/' + raw_input('ENTER ZIP CODE:  ')
+url = 'https://www.wunderground.com/weather-forecast/06268'
 
 response = requests.get(url)
 html = response.content
