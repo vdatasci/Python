@@ -12,6 +12,9 @@ class Customer(object):
     def deposit(self, amount):
         self.balance += int(amount)
         return self.balance
+    
+    def transactions(self):
+        
 
 
 #jv = Customer('Josh Voss', 50)
