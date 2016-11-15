@@ -10,4 +10,4 @@ configfiles = [os.path.join(dirpath, f)
 
 print 'Size:', '\t', 'FileName:', '\t', 'Date Created:'
 for file in configfiles:
-    print os.stat(file).st_size, '\t', file, '\t', os.stat(file).st_birthtime
+    print os.stat(file).st_size, '\t', file, '\t', os.stat(file).st_ctime
