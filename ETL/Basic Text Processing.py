@@ -28,6 +28,8 @@ result
 ### Concat ###
 a = ["Code", "mentor", "Python", "Developer"] 
 a.insert(0,"You're")
+del a[1]
+a.remove('Developer')
 print " ".join(a)
 
 ###
