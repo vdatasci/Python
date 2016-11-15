@@ -8,4 +8,4 @@ configfiles = [os.path.join(dirpath, f)
     for f in fnmatch.filter(files, '*.txt')]
 
 for file in configfiles:
-    print(configfiles)
+    print(file)
