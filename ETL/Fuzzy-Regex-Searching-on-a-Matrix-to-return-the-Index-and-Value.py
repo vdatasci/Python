@@ -3,6 +3,9 @@ from fuzzywuzzy import process
 import re
 import numpy as np
 
+lst=[]
+lst2=[]
+
 A = np.matrix([['hip hop','mixcloud'],['music','jammin']])
 srch = raw_input('Whatchu searchin? ')
 i = int(re.search('[0-9]+', str(A.shape)).group(0))
