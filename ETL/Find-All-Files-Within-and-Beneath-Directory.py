@@ -1,5 +1,6 @@
 import os
 import fnmatch
+from tabulate import tabulate
 
 path='P:\\'
 
@@ -8,6 +9,9 @@ configfiles = [os.path.join(dirpath, f)
     for f in fnmatch.filter(files, '*.txt')]
 
 
-print 'Size:', '\t', 'FileName:', '\t', 'Date Created:'
+print tabulate([['Alice', 24], ['Bob', 19]], headers=['Size', 'FileName', 'Date Created'])
+
+v = []
 for file in configfiles:
-    print os.stat(file).st_size, '\t', file, '\t', os.stat(file).st_ctime
+    v = os.stat(file).st_size, '\t', file, '\t', os.stat(file).st_ctime
+    #print os.stat(file).st_size, '\t', file, '\t', os.stat(file).st_ctime
