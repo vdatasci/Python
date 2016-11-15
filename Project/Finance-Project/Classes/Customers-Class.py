@@ -13,7 +13,7 @@ class Customer(object):
         self.balance += int(amount)
         return self.balance
     
-    def transactions(self):
+    def transaction_history(self):
         
 
 
