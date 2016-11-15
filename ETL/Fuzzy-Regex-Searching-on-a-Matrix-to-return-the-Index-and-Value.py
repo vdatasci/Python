@@ -2,11 +2,13 @@ from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 import re
 import numpy as np
+import os
 
 lst=[]
 lst2=[]
 
 A = np.matrix([['hip hop','mixcloud'],['music','jammin']])
+print(A)
 srch = raw_input('Whatchu searchin? ')
 
 
@@ -23,4 +25,6 @@ for o in range(i+j):
 
 maxlst2index = lst2.index(max(lst2))
 srch_rslt = lst[maxlst2index]
-np.where(A==srch_rslt)
+print(np.where(A==srch_rslt))
+
+os.system('P:\Python\Projects\Fuzzy-Regex-Searching-on-a-Matrix-to-return-the-Index-and-Value.py')
