@@ -1,4 +1,5 @@
 class Customer(object):
+    import os
     def __init__(self, name, balance=0.0):
         self.name = name
         self.balance = balance
@@ -23,3 +24,4 @@ jv
 jv.balance
 
 raw_input()
+os.system('Customers-Class.py')
