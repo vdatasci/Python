@@ -14,3 +14,7 @@ soup = BeautifulSoup(html)
 
 w = soup.find("div", {"id" : ["current"]})
 w.text
+
+f = soup.find("span", {"class" : ["wx-value"]})
+f.text
+
