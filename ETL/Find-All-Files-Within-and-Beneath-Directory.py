@@ -14,9 +14,7 @@ configfiles = [os.path.join(dirpath, f)
 
 v=[]
 for file in configfiles:
-    timestamp = os.stat(file).st_ctime
-    date =datetime.datetime.fromtimestamp(timestamp/1e3)
-    v.append((os.stat(file).st_size, os.path.basename(file), date))
+    v.append((os.stat(file).st_size, os.path.basename(file), file))
 
 
-print tabulate(v, headers=['Size', 'FileName', 'Date Created'])
+print tabulate(v, headers=['Size:', 'FileName:', 'FullPath & FileName:'])
