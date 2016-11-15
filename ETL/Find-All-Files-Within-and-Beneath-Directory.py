@@ -10,11 +10,11 @@ configfiles = [os.path.join(dirpath, f)
     for f in fnmatch.filter(files, '*.txt')]
 
 
-
+#basename = os.path.basename(file)
 
 v=[]
 for file in configfiles:
-    v.append((os.stat(file).st_size, os.path.basename(file), file))
+    v.append((os.stat(file).st_size, file))
 
 
-print tabulate(v, headers=['Size:', 'FileName:', 'FullPath & FileName:'])
+print tabulate(v, headers=['Size:', 'File'])
