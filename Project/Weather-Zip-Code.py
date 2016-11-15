@@ -12,5 +12,5 @@ html = response.content
 soup = BeautifulSoup(html)
 
 
-w = soup.findAll("div", {"id" : ["current"]})
-w
+w = soup.find("div", {"id" : ["current"]})
+w.text
