@@ -4,9 +4,12 @@ class Customer(object):
         self.balance = balance
     
     def withdrawl(self, amount):
+        log = []
+        log.append(balance)
         if int(amount)>self.balance:
             raise RuntimeError('Amount greater than available balance.')
         self.balance -= int(amount)
+        log.append(balance)
         return self.balance
     
     def deposit(self, amount):
