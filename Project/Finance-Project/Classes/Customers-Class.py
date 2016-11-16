@@ -22,6 +22,8 @@ class logger:
             return self.data[key]
     def __call__(self, item):
             self.data.append(item)
+    def clear(self):
+        self.data = []
         
 
 
