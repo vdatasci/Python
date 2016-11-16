@@ -1,9 +1,9 @@
 class Customer(object):
-    log = []
+    members = []
     def __init__(self, name, balance=0.0):
         self.name = name
         self.balance = balance
-        log.append(self)
+        self.members.append(name + ', ' + balance + ', ')
     
     def withdrawl(self, amount):
         if int(amount)>self.balance:
