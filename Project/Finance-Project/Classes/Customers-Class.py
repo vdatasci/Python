@@ -24,5 +24,3 @@ class Customer(object):
 #jv.withdrawl(10.0)
 #jv
 #jv.balance
-
-
