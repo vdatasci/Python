@@ -1,5 +1,4 @@
 class Customer(object):
-    log = []
     def __init__(self, name, balance=0.0):
         self.name = name
         self.balance = balance
@@ -8,13 +7,12 @@ class Customer(object):
         if int(amount)>self.balance:
             raise RuntimeError('Amount greater than available balance.')
         self.balance -= int(amount)
-        log.append(balance)
         return self.balance
     
     def deposit(self, amount):
         self.balance += int(amount)
         return self.balance
-    
+
     def transaction_history(self):
         
 
