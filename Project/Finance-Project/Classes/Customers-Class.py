@@ -1,11 +1,10 @@
 class Customer(object):
+    log = []
     def __init__(self, name, balance=0.0):
         self.name = name
         self.balance = balance
     
     def withdrawl(self, amount):
-        log = []
-        log.append(balance)
         if int(amount)>self.balance:
             raise RuntimeError('Amount greater than available balance.')
         self.balance -= int(amount)
