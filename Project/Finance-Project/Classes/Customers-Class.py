@@ -15,7 +15,13 @@ class Customer(object):
         self.balance += int(amount)
         return self.balance
 
-    def transaction_history(self):
+class logger:
+    def __init__(self):
+            self.data = []
+    def __getitem__(self, key):
+            return self.data[key]
+    def __call__(self, item):
+            self.data.append(item)
         
 
 
