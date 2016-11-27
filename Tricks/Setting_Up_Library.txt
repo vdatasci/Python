@@ -1,0 +1,13 @@
+The discovery that a minimal setup.py file is actually pretty easy.
+
+# setup.py
+from setuptools import setup
+
+setup(
+    name='darling',  # So pip knows what it's called
+    version='0.1',
+    # make sure setup.py's dir contains an importable 'darling':
+    # a `darling.py` or a `darling/` dir with an `__init__.py`
+    packages=['darling'],
+)
+When pip-installing my own packages became trivial, that was really nice: suddenly I could have my project in any directory, pip install it, and use it in a project in any other directory. That made splitting functionality into its own package so much easier.
