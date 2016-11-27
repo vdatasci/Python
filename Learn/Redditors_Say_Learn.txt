@@ -1,0 +1,7 @@
+generators
+list comprehensions
+Pandas Dataframes
+zip
+lamba
+filter
+yield
