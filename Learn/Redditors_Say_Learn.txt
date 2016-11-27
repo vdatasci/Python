@@ -1,5 +1,5 @@
 generators
-list comprehensions
+list comprehensions and dictionary comprehensions
 Pandas Dataframes
 zip
 lamba
