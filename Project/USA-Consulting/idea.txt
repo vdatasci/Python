@@ -1,1 +1,6 @@
 Create a Python Dashboard that shows a map of job listings (Robert Half, TekSystems, Accounting Principles, etc.), from consulting agencies, and compare cost of living with job listings.
+
+
+https://www.google.com/maps/search/temp+agency+near+Grand+Rapids,+MI+49506/@42.9417955,-85.7180763,13z
+
+http://www.indeed.com/jobs?q=analyst&l=Grand+Rapids%2C+MI&radius=0
