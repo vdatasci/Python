@@ -1,0 +1,1 @@
+Find a single library that streams twitch streams and chats, feeds it into a neural network, and determines what event is currently occuring.
