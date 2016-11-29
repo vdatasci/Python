@@ -1,0 +1,1 @@
+Create a Python Dashboard that shows a map of job listings (Robert Half, TekSystems, Accounting Principles, etc.), from consulting agencies, and compare cost of living with job listings.
