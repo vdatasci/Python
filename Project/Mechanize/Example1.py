@@ -10,7 +10,9 @@ br.open(req)
 print br.geturl()
 clickedurl = br.geturl()
 
-br.open(clickedurl)
+
+
+#br.open(clickedurl).read()
 #webbrowser.open(clickedurl,new=1)
 
 #browser.select_form(nr = 0)
