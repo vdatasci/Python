@@ -25,4 +25,4 @@ listingsarray = numpy.asarray(listingtaglist)
 pricesarray = numpy.asarray(pricetagslist)
 masterarray = numpy.column_stack((listingsarray, pricesarray))
 
-masterarray
+numpy.savetxt("P:\TempFile.txt", masterarray, delimiter=" | ", fmt="%s")
