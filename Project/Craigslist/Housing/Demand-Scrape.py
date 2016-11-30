@@ -14,7 +14,7 @@ for prices in pricetags:
     print prices.text
 
 listingtaglist = []
-listingtag = soup.findall("li", {"class":["result-row"]})
+listingtags = soup.findall("li", {"class":["result-row"]})
 for listings in listingtags:
     listingtaglist.append(listings.text)
     print listings.text
