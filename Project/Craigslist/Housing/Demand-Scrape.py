@@ -23,6 +23,10 @@ for prices in pricetags:
 masterarray = []
 listingsarray = numpy.asarray(listingtaglist)
 pricesarray = numpy.asarray(pricetagslist)
-masterarray = numpy.column_stack((listingsarray, pricesarray))
 
-numpy.savetxt("P:\TempFile.txt", masterarray, delimiter=" | ", fmt="%s")
+print(listingsarray.size)
+print(pricesarray.size)
+
+#masterarray = numpy.column_stack((listingsarray, pricesarray))
+
+#numpy.savetxt("P:\TempFile.txt", masterarray, delimiter=" | ", fmt="%s")
