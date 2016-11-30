@@ -13,7 +13,7 @@ listingtagprice = []
 listingtags = soup.findAll("li", {"class" : "result-row"})
 for listings in listingtags:
     listingtaglist.append(listings.text)
-    prc = re.search('\$\d+', str(listings.text))
+    prc = re.search('\$\d+', str(listings.text)).group(0)
     listingtagprice.append(prc)
         
         
