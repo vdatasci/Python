@@ -7,6 +7,7 @@ br.find_link(text='CT')
 
 req = br.click_link(text='CT')
 br.open(req)
-print br.response().read()
+
 print br.geturl()
 
+#print br.response().read()
