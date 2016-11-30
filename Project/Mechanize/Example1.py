@@ -10,4 +10,10 @@ br.open(req)
 
 print br.geturl()
 
+f = br.retrieve('http://pics3.city-data.com/images/data-stats-new.png')[0]
+print f
+fh = open(f)
+
+
+
 #print br.response().read()
