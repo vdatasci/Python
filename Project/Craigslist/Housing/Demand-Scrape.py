@@ -20,7 +20,7 @@ for prices in pricetags:
     pricetagslist.append(prices.text)
     print prices.text
 
-
+masterarray = []
 listingsarray = numpy.asarray(listingtaglist)
 pricesarray = numpy.asarray(pricetagslist)
 masterarray = numpy.column_stack((listingsarray, pricesarray))
