@@ -9,16 +9,15 @@ html = response.content
 soup = BeautifulSoup(html)
 
 listingtaglist = []
+listingtagprice = []
 listingtags = soup.findAll("li", {"class" : "result-row"})
 for listings in listingtags:
     listingtaglist.append(listings.text)
-    print listings.text
+    listingtagprice.append(re.search('\$\d+', str(listings.text)).group(0))
+        
+        
 
-pricetagslist = []
-pricetags = soup.findAll("span", {"class" : ["result-price"]})
-for prices in pricetags:
-    pricetagslist.append(prices.text)
-    print prices.text
+
 
 masterarray = []
 listingsarray = numpy.asarray(listingtaglist)
@@ -30,3 +29,14 @@ print(pricesarray.size)
 #masterarray = numpy.column_stack((listingsarray, pricesarray))
 
 #numpy.savetxt("P:\TempFile.txt", masterarray, delimiter=" | ", fmt="%s")
+
+
+
+
+
+
+#pricetagslist = []
+#pricetags = soup.findAll("span", {"class" : ["result-price"]})
+#for prices in pricetags:
+#    pricetagslist.append(prices.text)
+#    print prices.text
