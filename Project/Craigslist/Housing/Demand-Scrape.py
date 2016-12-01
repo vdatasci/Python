@@ -29,7 +29,7 @@ for listings2 in listingtags:
     if re.match('(\$\d+)', listings2.text) is not None:
         prc = re.search('(\$\d+)', listings2.text).group(0)
         listingtagprice.append(prc)
-    else 
+    else:
         listingtagprice.append("")
         
         
