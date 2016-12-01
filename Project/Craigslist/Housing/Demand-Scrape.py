@@ -26,8 +26,7 @@ for listings in listingtags:
     listingtaglist.append(descr)
 
 for listings2 in listingtags:
-    descr2 = listings2.text
-    prc = re.search('(\$\d+)', descr2).group(0)
+    prc = re.search('(\$\d+)', listings2).group(0)
     listingtagprice.append(prc)
         
         
