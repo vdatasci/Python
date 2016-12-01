@@ -26,7 +26,7 @@ for listings in listingtags:
     listingtaglist.append(descr)
 
 for i in xrange(len(listingtaglist)):
-    listingtagprice.append(re.search('\$\d+', listingtaglist[i]).group(0))
+    listingtagprice.append(re.search('\$\d+', str(listingtaglist[i])).group(0))
 
 
 
