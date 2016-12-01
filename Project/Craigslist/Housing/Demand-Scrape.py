@@ -26,8 +26,8 @@ for listings in listingtags:
     listingtaglist.append(descr)
 
 for i in listingtags:
-    if re.search('\$\d+', i):
-            listingtagprice.append(re.search('\$\d+', i).group())
+    if re.search('\$\d+', i.text):
+            listingtagprice.append(re.search('\$\d+', i.text).group())
 
 
 
