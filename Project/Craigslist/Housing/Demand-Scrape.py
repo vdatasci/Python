@@ -24,7 +24,7 @@ listingtags = soup.findAll("li", {"class" : "result-row"})
 for listings in listingtags:
     descr = listings.text
     listingtaglist.append(descr)
-    prc = re.search('(\$\d+|\s)', descr).group(0)
+    prc = re.match('(\$\d+)', descr)
     listingtagprice.append(prc)
         
         
