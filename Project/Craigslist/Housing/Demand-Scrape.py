@@ -25,19 +25,11 @@ for listings in listingtags:
     descr = listings.text
     listingtaglist.append(descr)
 
-for i in xrange(len(listingtaglist)):
-    listingtagprice.append(re.search('\$\d+', str(listingtaglist[i])).group(0))
+for i in listingtags:
+    if re.search('\$\d+', i):
+            listingtagprice.append(re.search('\$\d+', i).group())
 
 
-
-for listings2 in listingtags:
-    if re.match('(\$\d+)', listings2.text) is not None:
-        prc = re.match('(\$\d+)', listings2.text)
-        listingtagprice.append(prc)
-    else:
-        listingtagprice.append("")
-        
-        
 
 
 
