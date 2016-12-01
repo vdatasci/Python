@@ -26,8 +26,8 @@ for listings in listingtags:
     listingtaglist.append(descr)
 
 for listings2 in listingtags:
-    if re.match('(\$\d+)', str(listings2.text)) is not None:
-        prc = re.match('(\$\d+)', str(listings2.text))
+    if re.match('(\$\d+)', listings2.text) is not None:
+        prc = re.match('(\$\d+)', listings2.text)
         listingtagprice.append(prc)
     else:
         listingtagprice.append("")
