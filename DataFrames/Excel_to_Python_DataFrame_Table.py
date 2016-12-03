@@ -6,6 +6,8 @@ df = pd.read_excel("P:\sd.xlsx")
 df.head()
 
 df.Product
+df.ix[:,1:3]
+
 df.iloc[:3]
 
 df.sample(n=3)
