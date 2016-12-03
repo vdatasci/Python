@@ -9,3 +9,5 @@ w = linalg.lstsq(A.T, y)[0]
 
 line = w[0]*xi+w[1]
 plot(xi, line, 'r-', xi, y, 'o')
+
+show()
