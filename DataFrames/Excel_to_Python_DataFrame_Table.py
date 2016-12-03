@@ -11,6 +11,9 @@ df.Product
 df.iloc[:,:2]
 df.iloc[:3]
 
+df[(df['Price'] > 500) | (df['Price'] < 50)]
+df[~(df['Account'] == '714466')]
+
 df.sample(n=3)
 df.sample(frac=0.5)
 df.where(Price <= 10000)
