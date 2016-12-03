@@ -5,6 +5,10 @@ import numpy as np
 df = pd.read_excel("P:\sd.xlsx")
 df.head()
 
+df.Product
+
+df.iloc[0]
+
 #Pivot Table:
 sales_report = pd.pivot_table(df, index=["Manager", "Rep", "Product"], values=["Price", "Quantity"],
                            aggfunc=[np.sum, np.mean], fill_value=0)
