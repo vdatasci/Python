@@ -7,7 +7,7 @@ df.head()
 
 df.Product
 
-df.iloc[0]
+df.iloc[:3]
 
 #Pivot Table:
 sales_report = pd.pivot_table(df, index=["Manager", "Rep", "Product"], values=["Price", "Quantity"],
