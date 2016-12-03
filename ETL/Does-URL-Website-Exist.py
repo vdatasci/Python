@@ -8,7 +8,7 @@ code
 def checkwww(url):
    if ((urlopen(url).code / 100) >= 4):
       print "Nothing there."
-   else
+   else:
       print "Exists."
 
 
