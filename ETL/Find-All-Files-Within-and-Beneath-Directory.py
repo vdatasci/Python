@@ -19,3 +19,6 @@ for file in configfiles:
 
 with open('P:\TempFile.txt', 'w') as f:
     f.write(tabulate(v, headers=['Size:', 'File']))
+
+    
+    
