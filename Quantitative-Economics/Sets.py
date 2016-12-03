@@ -9,5 +9,3 @@ B.union(A)
 
 A.intersection(B)
 B.intersection(A)
-
-
