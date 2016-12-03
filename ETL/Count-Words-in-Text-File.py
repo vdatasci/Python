@@ -1,3 +1,6 @@
+import re
+from collections import Counter
+
 with open('P:\commonwords.txt') as f:
     passage = f.read()
 
