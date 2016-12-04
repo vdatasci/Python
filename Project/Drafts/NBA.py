@@ -1,13 +1,16 @@
-import requests
 from BeautifulSoup import BeautifulSoup
+import requests
+import re
+
 
 url = 'https://sports.yahoo.com/nba/teams/nyk/roster/'
 response = requests.get(url)
 html = response.content
 soup = BeautifulSoup(html)
 
-import re
-soup.findAll('a', href=re.compile('^/players/'))
+
+for playerlink in soup.findAll('a', href=re.compile('^/players/')):
+    print playerlink['href']
 
 
 
