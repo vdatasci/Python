@@ -27,7 +27,9 @@ password = ''
 
 browser.submit()
 
-
+for resp in response.history:
+        print resp.status_code, resp.url
+        print response.url
 
 #Controls can be found by name like this
 #control = br.form.find_control("controlname")
