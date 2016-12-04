@@ -13,8 +13,12 @@ for form in browser.forms():
     print "Form name:", form.name
     print form
 
+
+browser.form = list(browser.forms())[0]
+
+
 for control in browser.form.controls:
     print control
 
 
-browser.form = list(browser.forms())[0]
+
