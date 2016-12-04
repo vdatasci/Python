@@ -16,7 +16,13 @@ browser.form = list(browser.forms())[0]
 
 for control in browser.form.controls:
     print control
-    
+
+#Controls can be found by name like this
+#control = br.form.find_control("controlname")
+
+
+
+
 #for prolink in soup.findAll('a', href=re.compile('^.*/profile/.*')):
 #    print prolink.text
 #    print playerlink['href']
