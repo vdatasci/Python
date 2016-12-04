@@ -1,4 +1,5 @@
 from BeautifulSoup import BeautifulSoup
+import mechanize
 import requests
 import re
 
@@ -8,11 +9,19 @@ response = requests.get(url)
 html = response.content
 soup = BeautifulSoup(html)
 
+browser = mechanize.Browser()
+browser.set_handle_robots(False)
+browser.open("https://www.linkedin.com/")
+browser.form = list(browser.forms())[0]
 
-for prolink in soup.findAll('a', href=re.compile('^.*/profile/.*')):
-    print prolink.text
-    print playerlink['href']
-    print '\n'
+for control in browser.form.controls:
+    print control
+    print "type=%s, name=%s value=%s" % (control.type, control.name, browser[control.name])
+    
+#for prolink in soup.findAll('a', href=re.compile('^.*/profile/.*')):
+#    print prolink.text
+#    print playerlink['href']
+#    print '\n'
 
 #with open('P:\\TempFile.txt', 'w') as f:
-    #f.write(a)
+#    f.write(a)
