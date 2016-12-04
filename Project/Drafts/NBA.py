@@ -10,8 +10,9 @@ soup = BeautifulSoup(html)
 
 
 for playerlink in soup.findAll('a', href=re.compile('^/players/')):
+    print playerlink.text
     print playerlink['href']
-
+    print '\n'
 
 
 
