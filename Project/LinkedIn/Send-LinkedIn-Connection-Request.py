@@ -1,10 +1,12 @@
+#https://www.linkedin.com/vsearch/p?keywords=python&postalCode=49506&openAdvancedForm=true&locationType=I&countryCode=us&distance=50
+
 from BeautifulSoup import BeautifulSoup
 import mechanize
 import requests
 import re
 
 
-url = 'https://www.linkedin.com/vsearch/p?keywords=python&postalCode=49506&openAdvancedForm=true&locationType=I&countryCode=us&distance=50'
+url = 'http://www.linkedin.com'
 response = requests.get(url)
 html = response.content
 soup = BeautifulSoup(html)
