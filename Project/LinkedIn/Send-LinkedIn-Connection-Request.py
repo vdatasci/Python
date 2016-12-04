@@ -43,7 +43,8 @@ for resp in response.history:
 
 
 
-
+browser.open('https://www.linkedin.com/in/josh-voss?trk=nav_responsive_tab_profile')
+print browser.geturl()
 
 
 
