@@ -16,7 +16,6 @@ browser.form = list(browser.forms())[0]
 
 for control in browser.form.controls:
     print control
-    print "type=%s, name=%s value=%s" % (control.type, control.name, browser[control.name])
     
 #for prolink in soup.findAll('a', href=re.compile('^.*/profile/.*')):
 #    print prolink.text
