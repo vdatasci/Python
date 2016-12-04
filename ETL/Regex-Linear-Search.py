@@ -1,6 +1,4 @@
 def regularsearch(my_list, term):
-        import re
-        for i in range(len(my_list)):
-                if my_list[i] == re.compile(term):
-                    return i
-                return None
+    my_list_pos = [i for i, x in enumerate(my_list) if re.search(term, x)]
+    result = str(my_list[my_list_pos])
+    regularsearch = result
