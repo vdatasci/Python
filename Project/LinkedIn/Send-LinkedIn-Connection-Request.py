@@ -34,6 +34,15 @@ for resp in response.history:
         print resp.status_code, resp.url
         print response.url
 
+browser.open('https://www.linkedin.com/')
+
+
+
+
+
+
+
+
 
 url = 'https://www.linkedin.com/nhome/'
 response = requests.get(url)
