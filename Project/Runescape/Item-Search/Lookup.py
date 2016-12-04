@@ -33,6 +33,9 @@ response = requests.get(browser.geturl())
 html = response.content
 soup = BeautifulSoup(html)
 
-
+#Print 
 for ilink in soup.findAll('a', {'class':'table-item-link'}):
     print ilink
+    
+#for ilink in soup.findAll('a', href=True):
+#    print ilink['href']
