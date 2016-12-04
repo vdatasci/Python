@@ -32,7 +32,9 @@ browser.submit()
 #Controls can be found by name like this
 #control = br.form.find_control("controlname")
 
-
+#for form in browser.forms():
+#    print "Form name:", form.name
+#    print form
 
 
 #for prolink in soup.findAll('a', href=re.compile('^.*/profile/.*')):
