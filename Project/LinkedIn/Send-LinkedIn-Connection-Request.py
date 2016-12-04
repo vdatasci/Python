@@ -34,7 +34,14 @@ for resp in response.history:
         print response.url
 
 
-browser.open('https://www.linkedin.com/nhome/')
+url = 'https://www.linkedin.com/nhome/'
+response = requests.get(url)
+html = response.content
+soup = BeautifulSoup(html)
+
+with open('P:\\TempFile.txt', 'w') as ff:
+    ff.write(BeautifulSoup(html))
+
 
 #Controls can be found by name like this
 #control = br.form.find_control("controlname")
