@@ -34,7 +34,7 @@ for resp in response.history:
         print response.url
 
 
-browser.open('https://www.linkedin.com/in/josh-voss?trk=nav_responsive_tab_profile')
+browser.open('https://www.linkedin.com/nhome/')
 
 #Controls can be found by name like this
 #control = br.form.find_control("controlname")
