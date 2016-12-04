@@ -27,3 +27,12 @@ squery = 'iron'
 
 browser.submit()
 print browser.geturl()
+
+
+response = requests.get(browser.geturl())
+html = response.content
+soup = BeautifulSoup(html)
+
+
+for ilink in soup.findAll('a', {'class':'table-item-link'}):
+    print ilink
