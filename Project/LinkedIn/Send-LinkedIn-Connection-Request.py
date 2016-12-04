@@ -1,4 +1,5 @@
 #https://www.linkedin.com/vsearch/p?keywords=python&postalCode=49506&openAdvancedForm=true&locationType=I&countryCode=us&distance=50
+#http://wiki.dreamrunner.org/public_html/Python/Python-Mechanize-Cheat-Sheet%20.html
 
 from BeautifulSoup import BeautifulSoup
 import mechanize
