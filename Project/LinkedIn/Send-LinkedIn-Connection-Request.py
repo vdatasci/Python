@@ -29,13 +29,18 @@ username = ''
 password = ''
 
 browser.submit()
+print browser.geturl()
+
+
+browser.open('https://www.linkedin.com/')
+print browser.geturl()
+
+
 
 for resp in response.history:
         print resp.status_code, resp.url
         print response.url
 
-browser.open('https://www.linkedin.com/')
-print browser.geturl()
 
 
 
