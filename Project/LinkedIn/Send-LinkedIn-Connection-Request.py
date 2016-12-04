@@ -25,6 +25,8 @@ password = browser.form.find_control("session_password").value
 username = ''
 password = ''
 
+browser.submit()
+
 
 
 #Controls can be found by name like this
