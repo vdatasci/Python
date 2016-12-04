@@ -24,8 +24,9 @@ for control in browser.form.controls:
 
 squery = browser.form.find_control("query").value
 squery = 'iron'
+browser.submit(label='Search')
 
-browser.submit()
+#browser.submit()
 print browser.geturl()
 
 
