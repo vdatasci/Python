@@ -19,8 +19,8 @@ for control in browser.form.controls:
 
 
 
-username_field = browser.form.find_control("session_key")
-
+username_field_value = browser.form.find_control("session_key").value
+password_field_value = browser.form.find_control("session_password").value
 
 #Controls can be found by name like this
 #control = br.form.find_control("controlname")
