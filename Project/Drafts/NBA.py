@@ -15,10 +15,10 @@ for playerlink in soup.findAll('a', href=re.compile('^.*/players/([0-9]+)')):
     print '\n'
 
 
-
+url = 'https://sports.yahoo.com/nba/players/3706/'
 
 for playerlink in soup.findAll('table', summary=re.compile('Player')):
-    a = str(playerlink.contents).encode('ascii','ignore').replace('\n', '')
+    a = str(playerlink).encode('ascii','ignore').replace('\n', '')
 
 with open('P:\\TempFile.txt', 'w') as f:
     f.write(a)
