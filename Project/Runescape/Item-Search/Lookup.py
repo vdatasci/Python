@@ -19,5 +19,6 @@ browser.form = list(browser.forms())[0]
 
 for control in browser.form.controls:
     print control
+    print control.type
 
 
