@@ -9,7 +9,7 @@ html = response.content
 soup = BeautifulSoup(html)
 
 
-for playerlink in soup.findAll('a', href=re.compile('^/players/[0-9]')):
+for playerlink in soup.findAll('a', href=re.compile('^/players/([0-9]+)')):
     print playerlink.text
     print playerlink['href']
     print '\n'
