@@ -48,8 +48,30 @@ print browser.geturl()
 
 
 
+with open('P:\\TempFile.txt', 'w') as ff:
+    ff.write(browser.read())
 
 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 url = 'https://www.linkedin.com/nhome/'
 response = requests.get(url)
