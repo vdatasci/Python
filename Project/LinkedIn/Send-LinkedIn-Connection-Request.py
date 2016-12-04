@@ -35,6 +35,7 @@ for resp in response.history:
         print response.url
 
 browser.open('https://www.linkedin.com/')
+print browser.geturl()
 
 
 
