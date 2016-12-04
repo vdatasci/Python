@@ -17,6 +17,11 @@ browser.form = list(browser.forms())[0]
 for control in browser.form.controls:
     print control
 
+
+
+username_field = browser.form.find_control("session_key")
+
+
 #Controls can be found by name like this
 #control = br.form.find_control("controlname")
 
