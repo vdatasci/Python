@@ -1,7 +1,7 @@
 def rls(my_list, pattern):
     import re
     result = re.findall(pattern, ','.join(my_list))
-        return result
+    return result
 
 
 
