@@ -10,3 +10,5 @@ def rlsindex(my_list, pattern):
     r = re.findall(pattern, ','.join(my_list))
     for p in r:
         print my_list.index(p)
+        except:
+            pass
