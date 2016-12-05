@@ -40,6 +40,16 @@ links = table.findAll('a')
 for link in links:
     print links['href']
 
+for row in table.tbody.findAll('tr'):
+    first_column = row.findAll('th')[0].contents
+    third_column = row.findAll('td')[2].contents
+    print first_column, third_column
+
+
+
+
+
+
 
 rows=list()
 for row in table.findAll("tr"):
