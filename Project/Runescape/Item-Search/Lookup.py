@@ -40,6 +40,7 @@ links = table.findAll('a')
 for link in links:
     print links['href']
 
+
 rows=list()
 for row in table.findAll("tr"):
    rows.append(row)
