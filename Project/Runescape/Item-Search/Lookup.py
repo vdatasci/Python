@@ -35,7 +35,7 @@ html = response.content
 soup = BeautifulSoup(html)
 
 
-table = html.find('table')
+table = soup.find('table')
 links = table.findAll('a')
 for link in links:
     print links['href']
