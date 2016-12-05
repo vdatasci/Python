@@ -1,5 +1,4 @@
-def regularsearch(my_list, term):
+def regularsearch(my_list, pattern):
     import re
-    my_list_pos = [i for i, x in enumerate(my_list) if re.search(term, x)]
-    for p in my_list_pos:
-        return str(my_list[my_list_pos])
+    for p in [i for i, x in enumerate(my_list) if re.search(pattern, x)]:
+        return a[p]
