@@ -34,6 +34,17 @@ response = requests.get(browser.geturl())
 html = response.content
 soup = BeautifulSoup(html)
 
+
+table = html.find('table')
+links = table.findAll('a')
+print links
+
+rows=list()
+for row in table.findAll("tr"):
+   rows.append(row)
+
+
+
 ilist = []
 for ilink in soup.findAll('a', href=True):
     ilist.append(ilink['href'])
