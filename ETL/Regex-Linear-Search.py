@@ -1,4 +1,4 @@
 def regularsearch(my_list, pattern):
     import re
-    for p in [i for i, x in enumerate(my_list) if re.search(pattern, x)]:
-        return a[p]
+    re.findall(r+pattern, ','.join(my_list))
+    #[i for i, x in enumerate(a) if re.search('\w+', x)]
