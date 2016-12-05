@@ -38,7 +38,7 @@ soup = BeautifulSoup(html)
 table = soup.find('table')
 links = table.findAll('a')
 for link in links:
-    print links['href']
+    print link['href']
 
 for row in table.tbody.findAll('tr'):
     first_column = row.findAll('th')[0].contents
