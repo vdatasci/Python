@@ -27,7 +27,7 @@ squery = 'iron'
 
 browser.submit()
 print browser.geturl()
-browser.read()
+
 
 
 response = requests.get(browser.geturl())
