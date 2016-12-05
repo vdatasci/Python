@@ -1,8 +1,12 @@
-def regularsearch(my_list, pattern):
+def rls(my_list, pattern):
+    import re
+    result = re.findall(pattern, ','.join(my_list))
+        return result
+
+
+
+def rlsindex(my_list, pattern):
     import re
     r = re.findall(pattern, ','.join(my_list))
     for p in r:
         print my_list.index(p)
-
-
-    # my_list.index(r)
