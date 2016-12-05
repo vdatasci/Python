@@ -22,10 +22,10 @@ for control in browser.form.controls:
     print control.type
     print '\n'
 
-squery = browser.form.find_control("query").value
-squery = 'iron'
+#squery = browser.form.find_control("query").value
+#squery = 'iron'
 
-browser.submit()
+#browser.submit()
 print browser.geturl()
 
 
