@@ -32,7 +32,7 @@ for v in vlist:
         response = requests.get(urlgo)
         html = response.content
         soup = BeautifulSoup(html)
-        vtitles.append(str(soup.find('h3', {'class': 'r'})) + str(', '))
+        vtitles.append(str(soup.find('h3', {'class': 'r'}).text) + str(', '))
         
 
 h3 class r
