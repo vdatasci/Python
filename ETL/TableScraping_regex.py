@@ -59,8 +59,6 @@ for r in rows:
     rowlist.append(str(', '.join(r)))
 
 
-rls('(fire)\w+', rowlist)
-
 
 
 
