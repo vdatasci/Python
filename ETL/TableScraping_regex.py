@@ -39,7 +39,15 @@ with open('P:\TempFile.txt', 'w') as f:
 with open("P:\TempFile.txt", "a") as f:
     for r in rows:
         f.write(str(', '.join(r)) + '\n')
-        print(re.compile('(fire)\w+').match(j).group())
+
+
+rowlist = []
+for r in rows:
+    rowlist.append(str(', '.join(r)))
+
+
+
+
 
 
 
