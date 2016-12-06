@@ -24,10 +24,9 @@ linklist = []
 ytitles = soup.findAll('a', {'href': re.compile('.*(watch\?v).*')})
 for yt in ytitles:
         linklist.append(str(yt['href'])+str(', '))
-
-
-linklist[0]
-linklist[1]
+        
+        
+list(set(linklist))
 
 
 
