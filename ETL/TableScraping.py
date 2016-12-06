@@ -53,10 +53,12 @@ import numpy as np
 
 headers_array = np.array(headers).reshape(1,-1)
 rows_array = np.array(rows)
-np.vstack((headers_array, rows_array))
+listsheet = np.vstack((headers_array, rows_array))
 
 
 
+for q in len(listsheet):
+    np.append(np.fromstring(listsheet[q], sep=","))
 
 
 
