@@ -21,7 +21,7 @@ soup = BeautifulSoup(html)
 
 #<h3 class="yt-lockup-title ">
 
-ytitles = soup.findAll('div', {'class': re.compile('(yt-lockup-content)')})
+ytitles = soup.findAll('a')
 for yt in ytitles:
     print yt.text
 
