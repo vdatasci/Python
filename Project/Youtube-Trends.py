@@ -32,9 +32,5 @@ for v in vlist:
         response = requests.get(urlgo)
         html = response.content
         soup = BeautifulSoup(html)
-        vtitles.append(str(soup.findAll('a', {'data-href': urlgo})).encode('ascii','ignore').replace('\n', '') + str(', '))
-        
-        for playerlink in soup.findAll('table', summary=re.compile('Player')):
-        a = str(playerlink).encode('ascii','ignore').replace('\n', '')
-h3 class r
+        vtitles.append(str(soup.findAll('title')))
 
