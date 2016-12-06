@@ -4,7 +4,7 @@ import requests
 import re
 
 
-url= ''
+url= 'http://www.w3schools.com/html/html_tables.asp'
 
 browser = mechanize.Browser()
 browser.set_handle_robots(False)
