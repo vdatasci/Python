@@ -94,9 +94,9 @@ for i in len(rows_array):
     import sqlite3
     conn = sqlite3.connect('example.db')
     c = conn.cursor()
-    str(rows_array[i])[1:-1].replace("' '", "', '")
+    x = str(rows_array[i])[1:-1].replace("' '", "', '")
     c.execute('''INSERT INTO businesses
-                VALUES(?,?,?);''', ('VossDataScience', j, 'USA'))
+                VALUES(?,?,?);''', x)
     conn.commit()
     conn.close()
 
