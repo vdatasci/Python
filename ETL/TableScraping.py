@@ -58,3 +58,25 @@ listsheet = np.vstack((headers_array, rows_array))
 listsheet
 
 
+
+
+
+
+
+
+
+import sqlite3
+conn = sqlite3.connect('example.db')
+c = conn.cursor()
+c.execute('''CREATE TABLE businesses
+            (company VARCHAR(100),
+            contact varchar(100),
+            country varchar(100))''')
+
+
+import sqlite3
+conn = sqlite3.connect('example.db')
+c = conn.cursor()
+c.execute('SELECT * FROM businesses')
+print c.fetchall()
+
