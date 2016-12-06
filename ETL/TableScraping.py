@@ -90,15 +90,15 @@ conn.close()
 
 
 
-for r in rows:
-    import sqlite3
-    conn = sqlite3.connect('example.db')
-    c = conn.cursor()
-    x = str(r)[1:-1]
-    c.execute('''INSERT INTO businesses
-                VALUES(?,?,?);''', (x))
-    conn.commit()
-    conn.close()
+
+import sqlite3
+conn = sqlite3.connect('example.db')
+c = conn.cursor()
+
+c.executemany('''INSERT INTO businesses
+            VALUES(?,?,?);''', rows_array.tolist())
+conn.commit()
+conn.close()
 
 
 
