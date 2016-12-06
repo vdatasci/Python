@@ -88,15 +88,17 @@ conn.close()
 
 
 
-import sqlite3
-conn = sqlite3.connect('example.db')
-c = conn.cursor()
 
-str(listsheet[0]).replace("' '", "', '")
-c.execute('''INSERT INTO businesses
-            VALUES(?,?,?);''', ('VossDataScience', j, 'USA'))
-conn.commit()
-conn.close()
+
+for i in len(rows_array):
+    import sqlite3
+    conn = sqlite3.connect('example.db')
+    c = conn.cursor()
+    str(rows_array[i])[1:-1].replace("' '", "', '")
+    c.execute('''INSERT INTO businesses
+                VALUES(?,?,?);''', ('VossDataScience', j, 'USA'))
+    conn.commit()
+    conn.close()
 
 
 
