@@ -21,7 +21,7 @@ soup = BeautifulSoup(html)
 
 #<h3 class="yt-lockup-title ">
 
-ytitles = soup.findAll('h3', {'class': "yt-lockup-title "})
+ytitles = soup.findAll('a', {'class': "yt-uix-sessionlink yt-uix-tile-link yt-ui-ellipsis yt-ui-ellipsis-2       spf-link"})
 for yt in ytitles:
     print yt.text
 
