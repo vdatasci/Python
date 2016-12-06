@@ -33,3 +33,12 @@ for row in table.findAll('tr'):
     rows.append([val.text.encode('utf8') for val in row.findAll('td')])
 
 
+del rows[0]
+
+
+with open('P:\TempFile.txt', 'w') as f:
+    f.write(str(', '.join(headers)))
+
+
+
+
