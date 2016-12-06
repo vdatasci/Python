@@ -28,7 +28,7 @@ for yt in ytitles:
 
 vtitles = []
 for v in vlist:
-        urlgo= 'https://www.google.com/#q=youtube.com:+' + re.search('(?<=\=).*', str(v)).group()
+        urlgo= 'http://www.youtube.com/watch?v=' + re.search('(?<=\=).*', str(v)).group()
         response = requests.get(urlgo)
         html = response.content
         soup = BeautifulSoup(html)
