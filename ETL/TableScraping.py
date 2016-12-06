@@ -72,6 +72,34 @@ c.execute('''CREATE TABLE businesses
             (company VARCHAR(100),
             contact varchar(100),
             country varchar(100))''')
+conn.commit()
+conn.close()
+
+import sqlite3
+conn = sqlite3.connect('example.db')
+c = conn.cursor()
+c.execute('SELECT * FROM businesses')
+print c.fetchall()
+conn.close()
+
+
+
+
+
+
+
+import sqlite3
+conn = sqlite3.connect('example.db')
+c = conn.cursor()
+j = 'josh'
+c.execute('''INSERT INTO businesses
+            VALUES(?,?,?);''', ('VossDataScience', j, 'USA'))
+conn.commit()
+conn.close()
+
+
+
+
 
 
 import sqlite3
@@ -79,4 +107,4 @@ conn = sqlite3.connect('example.db')
 c = conn.cursor()
 c.execute('SELECT * FROM businesses')
 print c.fetchall()
-
+conn.close()
