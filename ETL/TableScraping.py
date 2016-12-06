@@ -5,10 +5,12 @@ import re
 
 
 url= 'http://www.w3schools.com/html/html_tables.asp'
+url2 = 'http://services.runescape.com/m=itemdb_oldschool/top100?list=0'
+
 
 browser = mechanize.Browser()
 browser.set_handle_robots(False)
-browser.open(url)
+browser.open(url2)
 
 
 response = requests.get(browser.geturl())
