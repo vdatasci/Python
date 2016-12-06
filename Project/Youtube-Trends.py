@@ -24,14 +24,16 @@ linklist = []
 ytitles = soup.findAll('a', {'href': re.compile('.*(watch\?v).*')})
 for yt in ytitles:
         linklist.append(str(yt['href'])+str(', '))
-        
-        
-vlist = list(set(linklist))
 
 
+vtitles = []
 for v in vlist:
-        url= 'https://www.google.com/#q=youtube.com:+' + re.search('(?<=\=).*', str(v)).group()
-        print url
+        urlgo= 'https://www.google.com/#q=youtube.com:+' + re.search('(?<=\=).*', str(v)).group()
+        response = requests.get(urlgo)
+        html = response.content
+        soup = BeautifulSoup(html)
+        vtitles.append(str(soup.find('h3', {'class': 'r'})) + str(', '))
+        
 
 h3 class r
 
