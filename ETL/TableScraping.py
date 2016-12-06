@@ -40,5 +40,6 @@ with open('P:\TempFile.txt', 'w') as f:
     f.write(str(', '.join(headers)))
 
 
-
+with open("P:\TempFile.txt", "a") as f:
+    f.write("appended text")
 
