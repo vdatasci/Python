@@ -51,9 +51,8 @@ with open("P:\TempFile.txt", "a") as f:
 
 import numpy as np
 
-headers_array = np.array(headers)
+headers_array = np.array(headers).reshape(1,-1)
 rows_array = np.array(rows)
-np.reshape(headersnp, (1,3)).shape
 np.vstack((headers_array, rows_array))
 
 
