@@ -19,13 +19,17 @@ response = requests.get(browser.geturl())
 html = response.content
 soup = BeautifulSoup(html)
 
-#<h3 class="yt-lockup-title ">
-
-ytitles = soup.findAll('a')
-for yt in ytitles:
-    print yt.text
-
 
 linklist = []
-for link in links:
-    linklist.append(link['href'])
+ytitles = soup.findAll('a', {'href': re.compile('.*(watch\?v).*')})
+for yt in ytitles:
+        linklist.append(str(yt['href'])+str(', '))
+
+
+linklist[0]
+linklist[1]
+
+
+
+h3 class r
+
