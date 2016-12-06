@@ -32,7 +32,7 @@ for v in vlist:
         response = requests.get(urlgo)
         html = response.content
         soup = BeautifulSoup(html)
-        vtitles.append(str(soup.findAll('h3', {'class': 'r'}).text) + str(', '))
+        vtitles.append(str(soup.findAll('a', {'data-href': urlgo})) + str(', '))
         
 h3 class r
 
