@@ -48,7 +48,7 @@ for r in rows:
 def allsearchtable(pattern, my_list):
     import re
     for item in my_list:
-        return re.match(pattern, item).group()
+        return re.find(pattern, item)
 
 
 
