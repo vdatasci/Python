@@ -37,7 +37,7 @@ del rows[0]
 
 
 with open('P:\TempFile.txt', 'w') as f:
-    f.write(str(', '.join(headers)))
+    f.write(str(', '.join(headers))+'\n')
 
 
 with open("P:\TempFile.txt", "a") as f:
