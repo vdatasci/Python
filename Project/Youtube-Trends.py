@@ -32,5 +32,5 @@ for v in vlist:
         response = requests.get(urlgo)
         html = response.content
         soup = BeautifulSoup(html)
-        vtitles.append(str(soup.findAll('title')))
+        vtitles.append(str(soup.findAll('title').text))
 
