@@ -45,10 +45,10 @@ rowlist = []
 for r in rows:
     rowlist.append(str(', '.join(r)))
 
-def allsearchtable(pattern, my_list):
+def rlst(my_list, pattern):
     import re
-    for item in my_list:
-        return re.match(pattern, item).group()
+    result = re.findall(pattern, ','.join(my_list))
+    return result
 
 
 
