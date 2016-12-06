@@ -18,6 +18,7 @@ soup = BeautifulSoup(html)
 
 table = soup.find('table')
 links = table.findAll('a')
+
 linklist = []
 for link in links:
     linklist.append(link['href'])
