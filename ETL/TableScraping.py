@@ -92,8 +92,7 @@ import sqlite3
 conn = sqlite3.connect('example.db')
 c = conn.cursor()
 
-for k in values
-= 'josh'
+str(listsheet[0]).replace("' '", "', '")
 c.execute('''INSERT INTO businesses
             VALUES(?,?,?);''', ('VossDataScience', j, 'USA'))
 conn.commit()
