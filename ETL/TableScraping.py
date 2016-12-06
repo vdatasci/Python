@@ -41,5 +41,6 @@ with open('P:\TempFile.txt', 'w') as f:
 
 
 with open("P:\TempFile.txt", "a") as f:
-    f.write("appended text")
+    for r in rows:
+        f.write(str(', '.join(r)) + '\n')
 
