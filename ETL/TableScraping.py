@@ -90,13 +90,13 @@ conn.close()
 
 
 
-for i in len(rows_array):
+for r in rows:
     import sqlite3
     conn = sqlite3.connect('example.db')
     c = conn.cursor()
-    x = str(rows_array[i])[1:-1].replace("' '", "', '")
+    x = str(r)[1:-1]
     c.execute('''INSERT INTO businesses
-                VALUES(?,?,?);''', x)
+                VALUES(?,?,?);''', (x))
     conn.commit()
     conn.close()
 
