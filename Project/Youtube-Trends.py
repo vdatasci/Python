@@ -26,9 +26,12 @@ for yt in ytitles:
         linklist.append(str(yt['href'])+str(', '))
         
         
-list(set(linklist))
+vlist = list(set(linklist))
 
 
+for v in vlist:
+        url= 'https://www.google.com/#q=youtube.com:+' + re.search('(?<=\=).*', str(v)).group()
+        print url
 
 h3 class r
 
