@@ -91,7 +91,9 @@ conn.close()
 import sqlite3
 conn = sqlite3.connect('example.db')
 c = conn.cursor()
-j = 'josh'
+
+for k in values
+= 'josh'
 c.execute('''INSERT INTO businesses
             VALUES(?,?,?);''', ('VossDataScience', j, 'USA'))
 conn.commit()
