@@ -45,10 +45,7 @@ rowlist = []
 for r in rows:
     rowlist.append(str(', '.join(r)))
 
-def rlst(my_list, pattern):
-    import re
-    result = re.findall(pattern, ','.join(my_list))
-    return result
+
 
 
 
