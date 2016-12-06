@@ -102,12 +102,7 @@ conn.close()
 
 
 
-
-
-
-import sqlite3
-conn = sqlite3.connect('example.db')
-c = conn.cursor()
-c.execute('SELECT * FROM businesses')
-print c.fetchall()
-conn.close()
+import pandas as pd
+db = sqlite3.connect('example.db')
+table = pd.read_sql_query("SELECT * from businesses", db)
+table.to_csv('P:\TempSQL.csv', index_label='index')
