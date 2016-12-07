@@ -13,4 +13,4 @@ soup = BeautifulSoup(html)
 linklist = []
 ytitles = soup.findAll('div', {'class': 'yt-lockup-content'})
 for yt in ytitles:
-    BeautifulSoup(str(yt)).find(text=True)
+    linklist.append(BeautifulSoup(str(yt)).find(text=True))
