@@ -20,7 +20,7 @@ for yt in ytitles:
         linklist.append(str(yt['href'])+str(', '))
 
 
-vtitles = []
+vlist = []
 for v in vlist:
         urlgo= 'http://www.youtube.com/watch?v=' + re.search('(?<=\=).*', str(v)).group()
         response = requests.get(urlgo)
