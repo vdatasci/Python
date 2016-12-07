@@ -24,3 +24,8 @@ words = re.findall(r'\w+', str(linklist))
 cap_words = [word.upper() for word in words]
 word_counts = Counter(cap_words)
 word_counts
+
+
+
+A = [‘letters’, ’letters’, ’letters\u2019’, ’vegetables’]
+str(', '.join(A).encode('utf-8').strip())
