@@ -21,7 +21,7 @@ for yt in ytitles:
 
 
 vlist = []
-for v in linklist:
+for v in set(linklist):
         urlgo= 'http://www.youtube.com/watch?v=' + re.search('(?<=\=).*', str(v)).group()
         response = requests.get(urlgo)
         html = response.content
