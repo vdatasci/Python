@@ -21,12 +21,12 @@ for yt in ytitles:
 
 
 vlist = []
-for v in vlist:
+for v in linklist:
         urlgo= 'http://www.youtube.com/watch?v=' + re.search('(?<=\=).*', str(v)).group()
         response = requests.get(urlgo)
         html = response.content
         soup = BeautifulSoup(html)
-        vtitles.append(str((soup.findAll('title'))).replace('[<title>','').replace('</title>]',''))
+        vlist.append(str((soup.findAll('title'))).replace('[<title>','').replace('</title>]',''))
 
 
 
