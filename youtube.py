@@ -13,4 +13,4 @@ soup = BeautifulSoup(html)
 linklist = []
 ytitles = soup.findAll('div', {'class': 'yt-lockup-content'})
 for yt in ytitles:
-        linklist.append(str(re.search('.*(?=Duration)', ytitles[10].text).group(0)))
+        linklist.append(str(re.search('.*(?=Duration)', ytitles[10].text[0:-1]).group(0)))
