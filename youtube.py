@@ -11,6 +11,6 @@ html = urllib.urlopen(url).read()
 soup = BeautifulSoup(html)
 
 linklist = []
-ytitles = soup.findAll('a', {'href': re.compile('.*(watch\?v).*')})
+ytitles = soup.findAll('div', {'class': 'yt-lockup-content'})
 for yt in ytitles:
         linklist.append(str(yt['href'])+str(', '))
