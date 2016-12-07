@@ -4,7 +4,10 @@ import requests
 from BeautifulSoup import BeautifulSoup
 
 
-html = urllib.urlopen('http://checkip.dyndns.org').read()
+url = 'https://www.youtube.com/feed/trending'
+url2 = 'http://checkip.dyndns.org'
+
+html = urllib.urlopen(url).read()
 soup = BeautifulSoup(html)
 
 texts = soup.findAll(text=True)
