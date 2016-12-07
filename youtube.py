@@ -11,5 +11,5 @@ html = urllib.urlopen(url).read()
 soup = BeautifulSoup(html)
 
 
-cont = soup.find('div', {'class': 'content'})
+cont = soup.find('div', {'id': 'content'})
 cont
