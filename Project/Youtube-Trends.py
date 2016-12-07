@@ -7,15 +7,9 @@ import sqlite3
 import re
 
 
-
 url= 'https://www.youtube.com/feed/trending'
 
-
-browser = mechanize.Browser()
-browser.set_handle_robots(False)
-browser.open(url)
-
-response = requests.get(browser.geturl())
+response = requests.get(url)
 html = response.content
 soup = BeautifulSoup(html)
 
