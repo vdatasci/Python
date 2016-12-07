@@ -16,6 +16,9 @@ for yt in ytitles:
 
 linklist
 
+linklist_joined = str(', '.join(linklist).encode('utf-8').strip())
+
+
 
 words = re.findall(r'\w+', str(linklist))
 cap_words = [word.upper() for word in words]
