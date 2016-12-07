@@ -21,7 +21,8 @@ def visible(element):
 
 visibletxt = filter(visible, texts)
 
-print(visibletxt)
+with open('P:\TempFile.txt', 'w') as f:
+     f.write(visibletxt)
 
 
 
