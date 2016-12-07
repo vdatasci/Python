@@ -21,7 +21,7 @@ def visible(element):
 
 visibletxt = filter(visible, texts)
 
-print(visibletxt)
+print(visibletxt.encode('utf8'))
 
 
 
