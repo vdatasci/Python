@@ -15,7 +15,7 @@ soup = BeautifulSoup(html)
 
 
 linklist = []
-ytitles = soup.findAll('a', {'href': re.compile('.*(watch\?v).*')})
+ytitles = soup.findAll('a', {'href': re.compile('.*(fref=pb&hc_location=friends_tab).*')})
 for yt in ytitles:
         linklist.append(str(yt['href'])+str(', '))
 
