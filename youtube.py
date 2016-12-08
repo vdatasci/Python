@@ -13,28 +13,18 @@ linklist = []
 ytitles = soup.findAll('div', {'class': 'yt-lockup-content'})
 for yt in ytitles:
     linklist.append(BeautifulSoup(str(yt)).find(text=True).encode('utf-8').strip())
+    print(BeautifulSoup(str(yt)).find(text=True).encode('utf-8').strip())
+
     
     
     
     
     
     
-linklist
-
-linklist_joined = str(', '.join(linklist).encode('utf-8').strip())
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
 
 words = re.findall(r'\w+', str(linklist))
 cap_words = [word.upper() for word in words]
