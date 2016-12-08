@@ -12,11 +12,27 @@ soup = BeautifulSoup(html)
 linklist = []
 ytitles = soup.findAll('div', {'class': 'yt-lockup-content'})
 for yt in ytitles:
-    linklist.append(BeautifulSoup(str(yt)).find(text=True))
-
+    linklist.append(BeautifulSoup(str(yt)).find(text=True).encode('utf-8').strip())
+    
+    
+    
+    
+    
+    
 linklist
 
 linklist_joined = str(', '.join(linklist).encode('utf-8').strip())
+
+
+
+
+
+
+
+
+
+
+
 
 
 
