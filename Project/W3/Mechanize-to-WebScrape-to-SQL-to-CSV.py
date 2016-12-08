@@ -44,7 +44,20 @@ print response.read()
 
 
 
-table = soup.find('table')
+table = soup.find('table', {'id': 'w3-table-all notranslate'})
+
+
+
+
+
+
+
+
+
+
+
+
+
 links = table.findAll('a')
 
 linklist = []
