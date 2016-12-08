@@ -35,34 +35,7 @@ response = br.submit()
 print response.read()
 
 
-
-
-
-
-
-
-
-
-
 table = soup.find('table', {'id': 'w3-table-all notranslate'})
-
-
-
-
-
-
-
-
-
-
-
-
-
-links = table.findAll('a')
-
-linklist = []
-for link in links:
-    linklist.append(link['href'])
 
 
 headers = []
@@ -87,6 +60,24 @@ with open("P:\TempFile.txt", "a") as f:
         f.write(str(', '.join(r)) + '\n')
 
 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 headers_array = np.array(headers).reshape(1,-1)
 rows_array = np.array(rows)
 listsheet = np.vstack((headers_array, rows_array))
