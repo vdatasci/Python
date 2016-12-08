@@ -20,6 +20,30 @@ html = response.content
 soup = BeautifulSoup(html)
 
 
+
+from mechanize import Browser
+br = Browser()
+br.open("http://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all")
+br.select_form(name="tryitform")
+sqlfield = br.form.find_control(id="textareaCodeSQL")
+sqlfield.value = 'doodle'
+response = br.submit()
+
+
+
+
+print response.read()
+
+
+
+
+
+
+
+
+
+
+
 table = soup.find('table')
 links = table.findAll('a')
 
