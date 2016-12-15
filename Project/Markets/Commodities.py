@@ -17,5 +17,5 @@ html = response.content
 soup = BeautifulSoup(html)
 
 
-len(soup.findAll('table'))
+ntables = int(len(soup.findAll('table')))
 
