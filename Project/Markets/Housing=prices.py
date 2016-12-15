@@ -18,7 +18,7 @@ soup = BeautifulSoup(html)
 raw_hdata = soup.findAll('div', {'class':'cardDetails man ptm phm'})
 
 for hd in raw_hdata:
-    print re.search(hd.text).group(0)
+    print re.search(str(hd.text)0, '(\$\d+\,\d+|\$\d+\,\d+)').group(0)
 
 
 
