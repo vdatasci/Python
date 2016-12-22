@@ -6,7 +6,10 @@ import re
 
 browser = mechanize.Browser()
 browser.set_handle_robots(False)
-browser.open("http://services.runescape.com/m=itemdb_oldschool/top100?list=0")
+browser.open("http://services.runescape.com/m=itemdb_oldschool/top100?list=3&scale=0")
+response = requests.get(browser.geturl())
+html = response.content
+soup = BeautifulSoup(html)
 
 
 for form in browser.forms():
@@ -28,11 +31,6 @@ for control in browser.form.controls:
 #browser.submit()
 print browser.geturl()
 
-
-
-response = requests.get(browser.geturl())
-html = response.content
-soup = BeautifulSoup(html)
 
 
 table = soup.find('table')
