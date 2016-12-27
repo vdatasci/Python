@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-df = pd.read_excel("P:\sd.xlsx")
+df = pd.read_excel("C:\\Users\\Linda\\Downloads\\Ginzberg.csv")
 df.head()
 
 list(df.columns.values)
