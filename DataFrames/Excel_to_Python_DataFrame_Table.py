@@ -6,7 +6,7 @@ import numpy as np
 df = pd.read_excel("P:\sd.xlsx")
 df.head()
 
-list(my_dataframe.columns.values)
+list(df.columns.values)
 
 df.Product
 df.iloc[:,:2]
