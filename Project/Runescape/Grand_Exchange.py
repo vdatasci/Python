@@ -16,6 +16,12 @@ data = json.loads(str(response.read()))
 name = str(data['item']['name'])
 price = str(data['item']['current']['price'])
 
+df = pd.DataFrame([[name, price]])
+df.columns = ['item', 'price']
+
+df
+
+
 
 
 with open('F:\_\rs\data.txt', 'w') as f:
