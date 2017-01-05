@@ -11,7 +11,7 @@ import re
 url='http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=21787'
 
 response = urllib2.urlopen(url)
-data = str(response.read())
+data = json.loads(str(response.read()))
 
 
 
