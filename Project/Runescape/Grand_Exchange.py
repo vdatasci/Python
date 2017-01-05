@@ -13,8 +13,8 @@ url='http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=21
 response = urllib2.urlopen(url)
 data = json.loads(str(response.read()))
 
-
-
+name = str(data['item']['name'])
+price = str(data['item']['current']['price'])
 
 
 
