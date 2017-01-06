@@ -10,14 +10,16 @@ import csv
 import re
 
 
+
+item_number = [1887]
+
+url = 'http://services.runescape.com/m=itemdb_oldschool/viewitem?obj=' + item_number
+
 response = requests.get(url)
 html = response.content
 soup = BeautifulSoup(html)
 
 
-item_number = [1887]
-
-url = 'http://services.runescape.com/m=itemdb_oldschool/viewitem?obj=' + item_number
 
 soup.findAll("class", {"class" : "result-row"})
 
