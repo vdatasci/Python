@@ -10,16 +10,22 @@ import csv
 import re
 
 
-
-item_number = [1887]
-
-url = 'http://services.runescape.com/m=itemdb_oldschool/viewitem?obj=' + item_number
-
-response = requests.get(url)
-html = response.content
-soup = BeautifulSoup(html)
+items_list = ['','']
+item_id = ['1887', '1905', '1277']
 
 
+for item in item_number:
+    url = 'http://services.runescape.com/m=itemdb_oldschool/viewitem?obj=' + item_id
 
-soup.findAll("class", {"class" : "result-row"})
+    response = requests.get(url)
+    html = response.content
+    soup = BeautifulSoup(html)
+
+
+    name = str(soup.find('div', {'class': 'item-description'}).findChild('h2').text)
+    price = str(soup.find('span', {'title': re.compile('\d+')}).text)
+    
+    
+
+
 
