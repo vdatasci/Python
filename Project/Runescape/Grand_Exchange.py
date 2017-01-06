@@ -10,9 +10,20 @@ import csv
 import re
 
 
+def is_json(myjson):
+    try:
+        json_object = json.loads(myjson)
+    except ValueError, e:
+        return False
+    return True
+
+
+
 url='http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=21787'
 
 response = urllib2.urlopen(url)
+
+
 data = json.loads(str(response.read()))
 
 name = str(data['item']['name'])
