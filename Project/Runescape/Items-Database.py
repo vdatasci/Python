@@ -18,7 +18,7 @@ item_numbers = list(xrange(25000))
 
 
 for item_id in item_numbers:
-    url = 'http://services.runescape.com/m=itemdb_oldschool/viewitem?obj=' + item_id
+    url = 'http://services.runescape.com/m=itemdb_oldschool/viewitem?obj=' + str(item_id)
     response = requests.get(str(url))
     html = response.content
     soup = BeautifulSoup(html)
