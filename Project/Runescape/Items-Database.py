@@ -10,7 +10,7 @@ import csv
 import re
 
 
-list(xrange(10))
+
 
 items_list = np.array(['',''])
 item_numbers = ['1887', '1905', '1277', '0', '1', '229']
