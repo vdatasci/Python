@@ -30,6 +30,9 @@ for item_id in item_numbers:
     except AttributeError:
         continue
 
+        
+items_list = np.delete(items_list, (0), axis=0)
+items_list
     
     
 
