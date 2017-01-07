@@ -11,7 +11,7 @@ import re
 
 
 items_list = np.array(['',''])
-item_numbers = ['1887', '1905', '1277']
+item_numbers = ['1887', '1905', '1277', '0', '1', '229']
 
 
 for item_id in item_numbers:
