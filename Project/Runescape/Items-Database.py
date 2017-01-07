@@ -19,13 +19,9 @@ for item in item_number:
     response = requests.get(str(url))
     html = response.content
     soup = BeautifulSoup(html)
-
-
     name = str(soup.find('div', {'class': 'item-description'}).findChild('h2').text)
     price = str(soup.find('span', {'title': re.compile('\d+')}).text)
-    
     new_row = np.array((name + ',' + price).split(','))
-    
     items_list = np.vstack((items_list,new_row))
     
     
