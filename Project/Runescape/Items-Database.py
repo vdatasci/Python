@@ -16,8 +16,7 @@ item_id = ['1887', '1905', '1277']
 
 for item in item_number:
     url = 'http://services.runescape.com/m=itemdb_oldschool/viewitem?obj=' + str(item_id)
-
-    response = requests.get(url)
+    response = requests.get(str(url))
     html = response.content
     soup = BeautifulSoup(html)
 
