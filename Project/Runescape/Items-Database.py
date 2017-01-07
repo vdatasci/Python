@@ -12,7 +12,7 @@ import re
 
 
 
-items_list = np.array(['',''])
+items_list = np.array(['','',''])
 item_numbers = ['1887', '1905', '1277', '0', '1', '229']
 
 
@@ -25,7 +25,7 @@ for item_id in item_numbers:
         name = str(soup.find('div', {'class': 'item-description'}).findChild('h2').text)
         price = str(soup.find('span', {'title': re.compile('\d+')}).text)
         description = str(soup.find('div', {'class': 'item-description'}).findChild('p').text)
-        new_row = np.array((name + ',' + price).split(','))
+        new_row = np.array((name + ',' + price + ',' + description).split(','))
         items_list = np.vstack((items_list,new_row))
     except AttributeError:
         continue
