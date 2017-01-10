@@ -58,6 +58,8 @@ df = pd.read_sql_query("SELECT * FROM tbl1", conn)
 print(df)
 
 
+df.to_html('F:\\_\\-\\sqlite3_query_pandas_to_html.html')
+
 ####c.execute('''PRAGMA table_info(tbl1)''').fetchall()
 
 
