@@ -57,7 +57,7 @@ from prettytable import PrettyTable
 
 y=PrettyTable()
 y.padding_width = 1
-y.add_column(tbl1_Column_Names[0],[ow[0] for row in tbl1_Rows])
+y.add_column(tbl1_Column_Names[0],[row[0] for row in tbl1_Rows])
 y.add_column(tbl1_Column_Names[1],[row[1] for row in tbl1_Rows])
 y.add_column(tbl1_Column_Names[2],[format(row[2],',d') for row in tbl1_Rows])
 y.align[tbl1_Column_Names[1]]="l"
