@@ -55,7 +55,7 @@ tbl2_Rows = c.execute('''SELECT * FROM tbl2''').fetchall()
 # Import Pandas Package, Print query
 Import pandas as pd
 df = pd.read_sql_query("SELECT * FROM tbl1", conn)
-print(df.head())
+print(df)
 
 
 ####c.execute('''PRAGMA table_info(tbl1)''').fetchall()
