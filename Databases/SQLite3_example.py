@@ -46,5 +46,9 @@ VALUES (?, ?, ?)
 
 
 
+tbl_Column_Names = list(map(lambda x: x[0], c.execute('''SELECT * FROM tbl1''').description))
+tb2_Column_Names = list(map(lambda x: x[0], c.execute('''SELECT * FROM tbl2''').description))
 
-c.execute('''PRAGMA table_info(tbl1)''').fetchall()
+####c.execute('''PRAGMA table_info(tbl1)''').fetchall()
+
+
