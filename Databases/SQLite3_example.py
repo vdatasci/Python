@@ -44,7 +44,7 @@ INSERT INTO tbl2(id, name, number)
 VALUES (?, ?, ?)
 ''', tbl1_insert_values)
 
-
+# Table Columns and Rows
 tbl_Column_Names = list(map(lambda x: x[0], c.execute('''SELECT * FROM tbl1''').description))
 tbl1_Rows = c.execute('''SELECT * FROM tbl1''').fetchall()
 
@@ -52,13 +52,14 @@ tb2_Column_Names = list(map(lambda x: x[0], c.execute('''SELECT * FROM tbl2''').
 tbl2_Rows = c.execute('''SELECT * FROM tbl2''').fetchall()
 
 
-# Import Pandas Package, Print query
+# Import Pandas Package, Print Query, Save Query as HTML and CSV 
 Import pandas as pd
 df = pd.read_sql_query("SELECT * FROM tbl1", conn)
 print(df)
 
 
 df.to_html('F:\\_\\-\\sqlite3_query_pandas_to_html.html')
+df.to_csv('F:\\_\\-\\sqlite3)query_pandas_to_csv.csv')
 
 ####c.execute('''PRAGMA table_info(tbl1)''').fetchall()
 
