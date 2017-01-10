@@ -3,7 +3,7 @@ import sqlite3
 
 
 connection = sqlite3.connect("db.sl3")
-c = conn.cursor()
+c = connection.cursor()
 
 # csvfile_from_internet = pd.read_csv('https://raw.githubusercontent.com/ben519/DataWrangling/master/Data/users.csv')
 
