@@ -10,8 +10,7 @@ c = connection.cursor()
 read_csv = pd.read_csv('F:\\Data\\github\\ben519\\users.csv')
 read_csv.to_sql('test1', connection)
 
-sql_query = raw_input('Input SQL Query:  ')
-read_sql_query = pd.read_sql_query(sql_query, connection)
+read_sql_query = pd.read_sql_query('''SELECT * FROM test1''', connection)
 
 
 read_sql_query
