@@ -57,6 +57,8 @@ Import pandas as pd
 df = pd.read_sql_query("SELECT * FROM tbl1", conn)
 print(df)
 
+print(df[df['name'].str.contains(u'(josh|half)')])
+
 
 df.to_html('F:\\_\\-\\sqlite3_query_pandas_to_html.html')
 df.to_csv('F:\\_\\-\\sqlite3)query_pandas_to_csv.csv')
