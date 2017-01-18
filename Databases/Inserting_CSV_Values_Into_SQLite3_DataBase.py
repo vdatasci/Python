@@ -21,7 +21,7 @@ with open('F:\\Data\\Samples\\names.csv') as f:
 
 # Inserting CSV Values into Table
 c.executemany('''
-INSERT INTO table1(id, name, number)
+INSERT INTO table1(id, first_name, last_name)
 VALUES (?, ?, ?)
 ''', inserting_csv_values)
 
