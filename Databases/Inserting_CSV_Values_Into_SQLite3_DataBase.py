@@ -1,13 +1,15 @@
 # Importing Libraries
 import sqlite3
 import csv
-Import pandas as pd
+import pandas as pd
 
 
 # Building SQLite3 Database Framework
 connection = sqlite3.connect('new.db')
 c = connection.cursor()
 
+
+DROP TABLE IF EXISTS
 # Building SQLite3 Table
 c.execute('''
 CREATE TABLE table1(id INTEGER PRIMARY KEY ASC, first_name VARCHAR(50), last_name VARCHAR(50))
