@@ -8,8 +8,13 @@ import pandas as pd
 connection = sqlite3.connect('new.db')
 c = connection.cursor()
 
+c.executescript('''
+DROP TABLE IF EXISTS User;
+DROP TABLE IF EXISTS Member;
+DROP TABLE IF EXISTS Course;
+''')
 
-DROP TABLE IF EXISTS
+
 # Building SQLite3 Table
 c.execute('''
 CREATE TABLE table1(id INTEGER PRIMARY KEY ASC, first_name VARCHAR(50), last_name VARCHAR(50))
