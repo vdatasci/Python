@@ -36,6 +36,7 @@ print(df[df['first_name'].str.contains(u'(josh|(.*(a).*))')])
 df.head(2)
 df.values
 df.tolist()
+df.T
 
 df.to_html('F:\\_\\-\\sqlite3_query_pandas_to_html.html')
 df.to_csv('F:\\_\\-\\sqlite3)query_pandas_to_csv.csv')
