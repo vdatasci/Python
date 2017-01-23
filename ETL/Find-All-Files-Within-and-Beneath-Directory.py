@@ -3,7 +3,7 @@ import fnmatch
 import datetime
 from tabulate import tabulate
 
-path='P:\\'
+path='F:\\'
 
 configfiles = [os.path.join(dirpath, f)
     for dirpath, dirnames, files in os.walk(path)
