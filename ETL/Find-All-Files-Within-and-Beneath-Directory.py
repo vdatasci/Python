@@ -17,7 +17,7 @@ for file in configfiles:
     v.append((os.stat(file).st_size, file))
 
 
-with open('P:\TempFile.txt', 'w') as f:
+with open('F:\TempFile.txt', 'w') as f:
     f.write(tabulate(v, headers=['Size:', 'File']))
 
     
