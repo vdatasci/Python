@@ -2,6 +2,7 @@
 
 import requests
 from BeautifulSoup import BeautifulSoup
+import re
 
 
 url = 'https://weather.com/weather/hourbyhour/l/Mansfield+Center+CT+06250'
@@ -15,4 +16,6 @@ soup = BeautifulSoup(html)
 w = soup.find("td", {"class" : ["temp"]})
 w.text
 
+weather = re.search('\d+', w.text).group(0)
 
+print weather
