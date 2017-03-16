@@ -5,7 +5,9 @@ outlook = win32.Dispatch('outlook.application')
 mail = outlook.CreateItem(0)
 mail.TO = 'joshvoss90@outlook.com'
 mail.Subject = 'test'
+Attachments.Add(Source='F:\Images\pointers.png')
 mail.Body = 'Message Body'
+
 
 TEMPLATE = '''
 <b> {{name}} </b>
