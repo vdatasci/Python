@@ -38,5 +38,5 @@ for key in sorted(word_counts.iterkeys()):
 
 
 
-A = [‘letters’, ’letters’, ’letters\u2019’, ’vegetables’]
-str(', '.join(A).encode('utf-8').strip())
+# A = [‘letters’, ’letters’, ’letters\u2019’, ’vegetables’]
+# str(', '.join(A).encode('utf-8').strip())
