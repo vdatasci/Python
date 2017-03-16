@@ -32,6 +32,11 @@ word_counts = Counter(cap_words)
 word_counts
 
 
+lwords = []
+for key in sorted(word_counts.iterkeys()):
+    lwords.append([key, word_counts[key]])
+
+
 
 A = [‘letters’, ’letters’, ’letters\u2019’, ’vegetables’]
 str(', '.join(A).encode('utf-8').strip())
