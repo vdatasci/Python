@@ -10,7 +10,7 @@ data = {
         'reports': [1,24,31,2,3]
         }
 
-df = pandas.DataFrame(data, index=None)
+df = pandas.DataFrame(data, index=False)
 
 
 outlook = win32.Dispatch('outlook.application')
