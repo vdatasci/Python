@@ -1,8 +1,8 @@
 from prettytable import PrettyTable
 import csv
-import urllib2
+import requests
 
-data = urllib2.urlopen('https://raw.githubusercontent.com/vdatasci/Python/master/DataFrames/data/randomdata.txt')
+data = requests.get('https://raw.githubusercontent.com/vdatasci/Python/master/DataFrames/data/randomdata.txt').content
 
 with open(data,'r') as f:
     reader = csv.DictReader(f, dialect='excel-tab')
