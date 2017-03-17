@@ -1,7 +1,10 @@
 from prettytable import PrettyTable
 import csv
+import urllib2
 
-with open('F:\\Data\\Samples\\names.csv','r') as f:
+data = urllib2.urlopen('https://raw.githubusercontent.com/vdatasci/Python/master/DataFrames/data/randomdata.txt')
+
+with open(data,'r') as f:
     reader = csv.DictReader(f, dialect='excel-tab')
     ptable = PrettyTable(reader.fieldnames)
     for rowdict in reader:
