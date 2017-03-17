@@ -10,7 +10,7 @@ data = {
         'reports': [1,24,31,2,3]
         }
 
-df = pandas.DataFrame(data, index=False)
+df = pandas.DataFrame(data, index=None)
 
 
 outlook = win32.Dispatch('outlook.application')
@@ -26,5 +26,5 @@ TEMPLATE = '''
 <p> {{dftable | safe}} </p>
 '''
 
-mail.HTMLBody = Environment().from_string(TEMPLATE).render(dftable=df.to_html()).strip()
+mail.HTMLBody = Environment().from_string(TEMPLATE).render(dftable=df.to_html(index=False)).strip()
 mail.Send()
