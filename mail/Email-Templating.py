@@ -11,6 +11,9 @@ mail.Body = 'Message Body'
 
 TEMPLATE = '''
 <b> {{name}} </b>
+<p>
+<img src="https://yt3.ggpht.com/-v0soe-ievYE/AAAAAAAAAAI/AAAAAAAAAAA/OixOH_h84Po/s900-c-k-no-mo-rj-c0xffffff/photo.jpg">
+</p>
 '''
 
 mail.HTMLBody = Environment().from_string(TEMPLATE).render(name='Josh').strip()
