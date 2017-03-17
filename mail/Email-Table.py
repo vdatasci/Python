@@ -31,7 +31,7 @@ mail.Body = 'Message Body'
 TEMPLATE = '''
 <h1>Your Table:</h1>
 <p> {{dftable | safe}} </p>
-<p>{{last_message}}</p>
+<p>{last_message} p2</p>
 '''
 
 mail.HTMLBody = Environment().from_string(TEMPLATE).render(dftable=df.to_html(index=False)).strip()
