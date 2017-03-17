@@ -16,8 +16,8 @@ df = pandas.DataFrame(data, index=None)
 outlook = win32.Dispatch('outlook.application')
 inbox = outlook.GetNamespace("MAPI").GetDefaultFolder(6)
 messages = inbox.Items
-last_message = messages.GetLast()
-last_message_body_content = last_message.body
+last_message = str(messages.GetLast())
+last_message_body_content = str(last_message.body)
 
 
 
