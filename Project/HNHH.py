@@ -20,4 +20,4 @@ for l in li:
     lst.append(unicodedata.normalize('NFKD', l.text).encode('ascii','igonre'))
 
 
-np.resize(lst,(np.matrix(lst).size/3,3))
+np.resize(lst,(np.matrix(lst).size/3,3)).tolist()
