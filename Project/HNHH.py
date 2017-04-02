@@ -1,4 +1,5 @@
 from BeautifulSoup import BeautifulSoup
+import numpy as np
 import unicodedata
 import requests
 import re
