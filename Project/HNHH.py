@@ -14,8 +14,7 @@ soup = BeautifulSoup(html)
 
 
 
-li = soup.findAll('div', {'class': ['cover-title','dailySongChart-artist','dailySongChart-e
-ditor-review']})
+li = soup.findAll('div', {'class': ['cover-title','dailySongChart-artist','dailySongChart-editor-review']})
 
 for l in li:
     print unicodedata.normalize('NFKD', l.text).encode('ascii','igonre')
