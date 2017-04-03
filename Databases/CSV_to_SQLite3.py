@@ -16,3 +16,6 @@ read_sql_query = pd.read_sql_query('''SELECT * FROM test1''', connection)
 read_sql_query
 read_csv
 
+c.commit()
+c.close()
+
