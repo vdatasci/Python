@@ -7,3 +7,5 @@ quandl.get("FRED/GDP")
 #(Crude Oil in Dollars per Barrel, Products in Dollars per Gallon)
 quandl.get("EIA/PET_RWTC_D")
 
+#Return a numpy array
+quandl.get("EIA/PET_RWTC_D", returns="numpy")
