@@ -29,3 +29,6 @@ process.extract("Brooklyn New York", choices, limit=2)
 process.extractOne("Brooklyn New York", choices)
     ('Brooklyn Nets', 73)
     
+
+fuzz.token_sort_ratio("This is a sentence", "A sentence is this")
+
