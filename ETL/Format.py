@@ -1,3 +1,6 @@
+#https://pyformat.info/
+
+
 "Hello {}, my name is {}".format('john', 'mike')
 #'Hello john, my name is mike'.
 
