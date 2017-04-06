@@ -16,3 +16,6 @@ data = {'first': 'Hodor', 'last': 'Hodor!'}
 
 '{first} {last}'.format(first='Hodor', last='Hodor!')
 #'Hodor Hodor!'
+
+'hello there %(5)s' % {'5': 'you'}
+#'hello there you'
