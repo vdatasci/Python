@@ -6,3 +6,7 @@
 
 "{greeting}, {}".format('world', greeting='Hello')
 #'Hello, world'
+
+data = {'first': 'Hodor', 'last': 'Hodor!'}
+'{first} {last}'.format(**data)
+#'Hodor Hodor!'
