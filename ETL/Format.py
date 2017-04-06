@@ -10,3 +10,6 @@
 data = {'first': 'Hodor', 'last': 'Hodor!'}
 '{first} {last}'.format(**data)
 #'Hodor Hodor!'
+
+'{first} {last}'.format(first='Hodor', last='Hodor!')
+#'Hodor Hodor!'
