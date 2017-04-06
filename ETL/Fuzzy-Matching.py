@@ -32,3 +32,4 @@ process.extractOne("Brooklyn New York", choices)
 
 fuzz.token_sort_ratio("This is a sentence", "A sentence is this")
 
+fuzz.token_set_ratio("This is a sentence is this", "A sentence is this is a sentence")
