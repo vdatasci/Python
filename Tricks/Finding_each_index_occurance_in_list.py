@@ -13,3 +13,8 @@ ii = np.where(values == searchval)[0]
 
 
 [xv if c else yv for (c,xv,yv) in zip(condition,x,y)]
+
+
+
+
+np.where(np.array('this is a sentence is this'.split(' ')) == 'this')
