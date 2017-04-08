@@ -32,3 +32,8 @@ Name: 2, dtype: float64
 
 In [5]: sub_df.iloc[0]['A']
 Out[5]: -0.13365288513107493
+
+
+
+df.keys()
+returns column names
