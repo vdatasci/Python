@@ -7,7 +7,9 @@ from fuzzywuzzy import process
 engine = create_engine('sqlite:///:memory:')
 
 # URL of csv file, putting csv data into pandas dataframe
-csv_url = 'http://samplecsvs.s3.amazonaws.com/SalesJan2009.csv'
+#https://raw.githubusercontent.com/vdatasci/Python/master/Databases/Data/SalesJan2009.csv
+#http://samplecsvs.s3.amazonaws.com/SalesJan2009.csv
+csv_url = 'https://raw.githubusercontent.com/vdatasci/Python/master/Databases/Data/SalesJan2009.csv'
 df = pd.read_csv(csv_url)
 
 #Pushing df to sqlalchemy table
