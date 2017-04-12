@@ -8,5 +8,6 @@ response = urllib2.urlopen(url)
 html = response.read()
 soup = BeautifulSoup(html)
 
-for vid in soup.findAll(attrs={'class':'pl-video-title'}):
-    print vid['href']
+vids = []
+for vid in soup.findAll(attrs={'class':'pl-video-title-link'}):
+    vids.append(vid['href'])
