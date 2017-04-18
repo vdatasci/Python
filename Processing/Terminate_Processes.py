@@ -16,3 +16,9 @@ for proc in psutil.process_iter():
     # check whether the process name matches
     if proc.name() == PROCNAME:
         proc.kill()
+
+##################################
+
+
+import os
+os.system('taskkill /f /im exampleProcess.exe')
