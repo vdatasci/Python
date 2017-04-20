@@ -7,6 +7,7 @@ import sqlite3
 import pandas as pd
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
+import time
 
 
 url = 'http://www.hotnewhiphop.com/'
@@ -27,6 +28,10 @@ for l in li:
 
 lst = np.resize(lst,(np.matrix(lst).size/3,3)).tolist()
 
+for i in range(len(lst)/3):
+    localtime = time.asctime( time.localtime(time.time()) )
+    lst[i].insert(0,str(localtime))
+
 
 conn = sqlite3.connect('example.db')
 
@@ -35,3 +40,4 @@ df.columns = ['Song','Artist','Rating']
 
 df.to_sql('Music', conn, if_exists='append')
 
+pd.read_sql_query('SELECT * FROM Music', conn)
