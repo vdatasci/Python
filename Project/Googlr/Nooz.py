@@ -14,7 +14,9 @@ result = requests.get('https://www.google.com/webhp?sourceid=chrome-instant&ion=
 result.status_code
 result.headers
 
-soup = BeautifulSoup(r_text, "html.parser")
+content = result.content
+
+soup = BeautifulSoup(content, "html.parser")
 
 
 response = requests.get(str(url))
