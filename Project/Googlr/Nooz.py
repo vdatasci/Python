@@ -21,12 +21,11 @@ soup = BeautifulSoup(html)
 
 response.url
 
-while True:
-    try:
-        NId = soup.find('div', {'class': '_NId'})
-        ires = soup.find('div', {'id':'ires'})
-    except AttributeError:
-        continue
+links = []
+for item in soup.findAll('h3', {'class': re.compile('.*( _U6c)'}):
+    links.append(item.a['href'])
+
+
 
 
 #price = str(soup.find('span', {'title': re.compile('\d+')}).text)
