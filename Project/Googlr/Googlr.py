@@ -24,8 +24,6 @@ try:
     NId = str(soup.find('div', {'class': '_NId'}).text)
     price = str(soup.find('span', {'title': re.compile('\d+')}).text)
     description = str(soup.find('div', {'class': 'item-description'}).findChild('p').text)
-    new_row = np.array((name + ',' + price + ',' + description).split(','))
-    items_list = np.vstack((items_list,new_row))
 except AttributeError:
     continue
 
