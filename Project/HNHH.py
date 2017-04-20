@@ -28,7 +28,7 @@ for l in li:
 
 lst = np.resize(lst,(np.matrix(lst).size/3,3)).tolist()
 
-for i in range(len(lst)/3):
+for i in range(len(lst)):
     localtime = time.asctime( time.localtime(time.time()) )
     lst[i].insert(0,str(localtime))
 
