@@ -20,7 +20,7 @@ soup = BeautifulSoup(html)
 response.url
 
 links = []
-for item in soup.find_all('h3', {'class': re.compile('.*(\_HId)')}):
+for item in soup.find_all('h3', {'class': 'r _U6c'}):
     links.append(item.a['href'])
 
 
@@ -29,4 +29,3 @@ for item in soup.find_all('h3', {'class': re.compile('.*(\_HId)')}):
 #price = str(soup.find('span', {'title': re.compile('\d+')}).text)
 #description = str(soup.find('div', {'class': 'item-description'}).findChild('p').text)
 
-NId
