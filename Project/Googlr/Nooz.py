@@ -7,10 +7,10 @@ import urllib2
 import re
 
 
+query = str('grand rapids michigan').replace(' ', '+')
+
 r = requests.get('https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q={}&tbm=nws'.format(query))
 soup = BeautifulSoup(r.text, "html.parser")
-
-query = str('grand rapids michigan').replace(' ', '+')
 
 
 response = requests.get(str(url))
