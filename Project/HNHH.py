@@ -29,7 +29,6 @@ lst = np.resize(lst,(np.matrix(lst).size/3,3)).tolist()
 
 
 
-
 engine = create_engine('HNHH.db')
 
 df = pd.DataFrame(lst)
