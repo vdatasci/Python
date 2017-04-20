@@ -22,7 +22,7 @@ soup = BeautifulSoup(html)
 response.url
 
 links = []
-for item in soup.findAll('h3', {'class': re.compile('.*( _U6c)'}):
+for item in soup.findAll('h3', {'class': re.compile('.*(\_HId)')}):
     links.append(item.a['href'])
 
 
