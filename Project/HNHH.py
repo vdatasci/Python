@@ -33,7 +33,7 @@ for i in range(len(lst)/3):
     lst[i].insert(0,str(localtime))
 
 
-conn = sqlite3.connect('example.db')
+conn = sqlite3.connect('HNHH.db')
 
 df = pd.DataFrame(lst)
 df.columns = ['Song','Artist','Rating']
