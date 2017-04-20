@@ -21,12 +21,12 @@ soup = BeautifulSoup(html)
 
 response.url
 
-
-try:
-    NId = soup.find('div', {'class': '_NId'})
-    ires = soup.find('div', {'id':'ires'})
-except AttributeError:
-    continue
+while True:
+    try:
+        NId = soup.find('div', {'class': '_NId'})
+        ires = soup.find('div', {'id':'ires'})
+    except AttributeError:
+        continue
 
 
 #price = str(soup.find('span', {'title': re.compile('\d+')}).text)
