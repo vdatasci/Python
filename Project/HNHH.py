@@ -28,8 +28,7 @@ for l in li:
 lst = np.resize(lst,(np.matrix(lst).size/3,3)).tolist()
 
 
-
-engine = create_engine('HNHH.db')
+engine = sqlalchemy.create_engine("HNHH.db")
 
 df = pd.DataFrame(lst)
 df.columns = ['Song','Artist','Rating']
