@@ -36,7 +36,7 @@ for i in range(len(lst)/3):
 conn = sqlite3.connect('HNHH.db')
 
 df = pd.DataFrame(lst)
-df.columns = ['Song','Artist','Rating']
+df.columns = ['Date', 'Song','Artist','Rating']
 
 df.to_sql('Music', conn, if_exists='append')
 
