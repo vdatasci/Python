@@ -1,4 +1,4 @@
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
 import mechanize
@@ -9,8 +9,11 @@ import re
 
 query = str('grand rapids michigan').replace(' ', '+')
 
-r = requests.get('https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q={}&tbm=nws'.format(query))
-r_text = r.text
+result = requests.get('https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q={}&tbm=nws'.format(query))
+
+result.status_code
+result.headers
+
 soup = BeautifulSoup(r_text, "html.parser")
 
 
