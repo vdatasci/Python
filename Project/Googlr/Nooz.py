@@ -11,19 +11,13 @@ query = str('grand rapids michigan').replace(' ', '+')
 
 result = requests.get('https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q={}&tbm=nws'.format(query))
 
+result.url
 result.status_code
 result.headers
 
 content = result.content
 
 soup = BeautifulSoup(content, "html.parser")
-
-
-response = requests.get(str(url))
-html = response.content
-soup = BeautifulSoup(html)
-
-response.url
 
 links = []
 for item in soup.find_all('h3', {'class': 'r _U6c'}):
