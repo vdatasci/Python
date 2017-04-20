@@ -3,7 +3,7 @@ import numpy as np
 import unicodedata
 import requests
 import re
-from sqlalchemy import create_engine
+import sqlite3
 import pandas as pd
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
@@ -28,10 +28,10 @@ for l in li:
 lst = np.resize(lst,(np.matrix(lst).size/3,3)).tolist()
 
 
-engine = sqlalchemy.create_engine("HNHH.db")
+conn = sqlite3.connect('example.db')
 
 df = pd.DataFrame(lst)
 df.columns = ['Song','Artist','Rating']
 
-df.to_sql('Music', engine, if_exists='append')
+df.to_sql('Music', conn, if_exists='append')
 
