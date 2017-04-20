@@ -7,12 +7,10 @@ import urllib2
 import re
 
 
-goos = str('grand rapids michigan')
+r = requests.get('https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q={}&tbm=nws'.format(query))
+soup = BeautifulSoup(r.text, "html.parser")
 
-#goos = raw_input('Search Google:   ')
-
-
-url = 'https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=' + goos.replace(' ', '+') + str('&tbm=nws')
+query = str('grand rapids michigan').replace(' ', '+')
 
 
 response = requests.get(str(url))
@@ -22,7 +20,7 @@ soup = BeautifulSoup(html)
 response.url
 
 links = []
-for item in soup.findAll('h3', {'class': re.compile('.*(\_HId)')}):
+for item in soup.find_all('h3', {'class': re.compile('.*(\_HId)')}):
     links.append(item.a['href'])
 
 
