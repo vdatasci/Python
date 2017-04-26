@@ -1,0 +1,12 @@
+Operation	Notation	(read as)	is true if and only if
+Negation	$ \lnot A$	(not $ A$)	$ A$ is false
+Conjunction	$ A\land B$	($ A$ and $ B$)	both $ A$ and $ B$ are true
+Disjunction	$ A\lor B$	($ A$ or $ B$)	$ A$ or $ B$ is true (or both are true)
+Antivalence	$ A \not\equiv B$	(either $ A$ or $ B$)	$ A$ and $ B$ are assigned different truth values
+Implication	
+$ A\Rightarrow B$	 
+$ B\Leftarrow A$	 
+($ A$ implies $ B$)	 
+($ B$ follows from $ A$)	 
+$ A$ is false or $ B$ is true
+Equivalence	$ A\Leftrightarrow B$	($ A$ is equivalent to $ B$)	$ A$ and $ B$ are assigned identical truth values
