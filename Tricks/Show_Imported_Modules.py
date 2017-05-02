@@ -1,4 +1,7 @@
 import pip
-for i in pip.get_installed_distributions(local_only=True):
-    print(i)
+
+modules = set([])
+for module in pip.get_installed_distributions(local_only=True):
+    print(module)
+    modules.add(module)
 
