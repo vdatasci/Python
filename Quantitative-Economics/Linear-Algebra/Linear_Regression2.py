@@ -18,4 +18,5 @@ plt.plot(x,y, 'yo', x, fit_fn(x), '--k')
 plt.xlim(0, 5)
 plt.ylim(0, 12)
 
+# Show our plot
 plt.show()
