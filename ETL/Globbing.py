@@ -25,5 +25,5 @@ glob2.glob('F:\Python\**\*.py')
 
 
 
-fuzzfind.fuzzyfinder('map', glob2.glob('F:\Python\**\*.py'))
+print '\n'.join([str(x) for x in fuzzfind.fuzzyfinder('map', glob2.glob('F:\Python\**\*.py'))])
 
