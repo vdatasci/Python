@@ -16,3 +16,14 @@ for name in glob.glob('dir/*[0-9].*'):
     print name
 # dir/file1.txt
 # dir/file2.txt
+
+
+import glob2
+
+glob2.glob('F:\Python\**\*.py')
+
+
+
+
+fuzzfind.fuzzyfinder('map', glob2.glob('F:\Python\**\*.py'))
+
