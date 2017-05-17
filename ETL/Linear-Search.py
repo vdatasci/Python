@@ -12,3 +12,9 @@ item two
 
 position = my_list.index(term)
 1
+
+
+
+'element 1' if 'element 1' in ['element 1', 'item two', 'element three', 'item 4'] else ''
+
+ls = lambda x,l: x if x in l else ''
