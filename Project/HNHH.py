@@ -23,7 +23,7 @@ li = soup.findAll('div', {'class': ['cover-title','dailySongChart-artist','daily
 
 lst = []
 for l in li:
-    lst.append(unicodedata.normalize('NFKD', l.text).encode('ascii','igonre'))
+    lst.append(unicodedata.normalize('NFKD', l.text).encode('ascii','ignore'))
 
 
 lst = np.resize(lst,(np.matrix(lst).size/3,3)).tolist()
