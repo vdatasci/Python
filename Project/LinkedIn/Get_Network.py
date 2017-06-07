@@ -14,9 +14,8 @@ driver.get("https://www.linkedin.com/")
 email = driver.find_element_by_class_name("login-email")
 password = driver.find_element_by_class_name("login-password")
 
-#Input Email and Password
-email.send_keys('email@address.com')
-password.send_keys('password')
+email.send_keys('JoshVoss90@Outlook.com')
+password.send_keys('Jobpassword1!')
 
 submit_button = driver.find_element_by_class_name('login-form')
 submit_button.submit()

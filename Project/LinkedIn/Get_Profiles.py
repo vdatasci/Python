@@ -15,9 +15,8 @@ driver.get("https://www.linkedin.com/")
 email = driver.find_element_by_class_name("login-email")
 password = driver.find_element_by_class_name("login-password")
 
-#Input Email and Password
-email.send_keys('email@address.com')
-password.send_keys('password')
+email.send_keys('JoshVoss90@Outlook.com')
+password.send_keys('Jobpassword1!')
 
 submit_button = driver.find_element_by_class_name('login-form')
 submit_button.submit()
@@ -62,18 +61,19 @@ for z in range(len(userlinks)):
     
     	
     with open('F:\Python\Projects\LinkedIn\Data\LinkedIn_Network_Info.txt', 'a') as f:
+        f.write(str(driver.current_url) + str(' ~ '))
+        f.write(str(' ☺ '))
         f.write(str(unicodedata.normalize('NFKD', name).encode('ascii','replace')).replace('\\n', ' ~ ').replace('  ','').replace('\n', ' ~ ').strip())
-        f.write(str(', '))
-        f.write(str(unicodedata.normalize('NFKD', headline).encode('ascii','replace')).replace('\\n', ' ~ ').replace('  ','').replace('\n', ' ~ ').strip())
-        f.write(str(', '))
+        f.write(str(' ☺ '))
         f.write(str(unicodedata.normalize('NFKD', company).encode('ascii','replace')).replace('\\n', ' ~ ').replace('  ','').replace('\n', ' ~ ').strip())
-        f.write(str(', '))
-        f.write(str(unicodedata.normalize('NFKD', school).encode('ascii','replace')).replace('\\n', ' ~ ').replace('  ','').replace('\n', ' ~ ').strip())
-        f.write(str(', '))
-        f.write(str(unicodedata.normalize('NFKD', degree).encode('ascii','replace')).replace('\\n', ' ~ ').replace('  ','').replace('\n', ' ~ ').strip())
-        f.write(str(', '))
+        f.write(str(' ☺ '))
         f.write(str(unicodedata.normalize('NFKD', location).encode('ascii','replace')).replace('\\n', ' ~ ').replace('  ','').replace('\n', ' ~ ').strip())
-        f.write(str('\n'))
+        f.write(str(' ☺ '))
+        f.write(str(unicodedata.normalize('NFKD', headline).encode('ascii','replace')).replace('\\n', ' ~ ').replace('  ','').replace('\n', ' ~ ').strip())
+        f.write(str(' ☺ '))
+        f.write(str(unicodedata.normalize('NFKD', school).encode('ascii','replace')).replace('\\n', ' ~ ').replace('  ','').replace('\n', ' ~ ').strip())
+        f.write(str(' ☺ '))
+        f.write(str(unicodedata.normalize('NFKD', degree).encode('ascii','replace')).replace('\\n', ' ~ ').replace('  ','').replace('\n', ' ~ ').strip())
         f.write(str('\n'))
 
 
